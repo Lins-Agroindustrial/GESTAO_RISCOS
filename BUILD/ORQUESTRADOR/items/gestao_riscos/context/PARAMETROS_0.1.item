@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_6jIMgAkiEe2Ax_MwDXx3bg" confirmationNeeded="false" name="HOMOLOGACAO">
+    <contextParameter xmi:id="_lTAnIAw-Ee2A6879-FM6Fw" comment="" name="DATAHORAPROCESSAMENTO" prompt="DATAHORAPROCESSAMENTO?" promptNeeded="true" repositoryContextId="built-in" type="id_String" value="2024-04-17 00:00:00"/>
+    <contextParameter xmi:id="_Vm0DoPDCEe2wq8oM-SeJ3w" comment="" name="CAMINHO_ARQUIVO_IMPORT" prompt="CAMINHO_ARQUIVO_IMPORT?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="&quot;C:/Users/ev52507/Desktop/GESTAO_RISCOS/&quot;"/>
+    <contextParameter xmi:id="_kSsk4PXfEe6gHPNzQXR5JA" comment="" name="CAMINHO_ARQUIVO_IMPORT_B" prompt="CAMINHO_ARQUIVO_IMPORT_B?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="&quot;C:/Users/ev52507/Desktop/GESTAO_RISCOS/&quot;"/>
+    <contextParameter xmi:id="_9I1-0D-8Ee-UlcAlr1dKNA" comment="Parametro Externo chamado por Rundeck" name="PARAMETRODATAINICIO" prompt="PARAMETRODATAINICIO?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_6jIMggkiEe2Ax_MwDXx3bg" confirmationNeeded="false" name="PRODUCAO">
+    <contextParameter xmi:id="_lTAnIQw-Ee2A6879-FM6Fw" comment="" name="DATAHORAPROCESSAMENTO" prompt="DATAHORAPROCESSAMENTO?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter xmi:id="_Vm0DofDCEe2wq8oM-SeJ3w" comment="" name="CAMINHO_ARQUIVO_IMPORT" prompt="CAMINHO_ARQUIVO_IMPORT?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="&quot;//work.local/ub/dados/Gestao-de-Risco/14. Power BI/7. Relatório de Posição de Hedge/&quot;"/>
+    <contextParameter xmi:id="_kSsk4fXfEe6gHPNzQXR5JA" comment="" name="CAMINHO_ARQUIVO_IMPORT_B" prompt="CAMINHO_ARQUIVO_IMPORT_B?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="&quot;//work.local/ub/dados/Gestao-de-Risco/0. Bloomberg/&quot;"/>
+    <contextParameter xmi:id="_9I2l4D-8Ee-UlcAlr1dKNA" comment="Parametro Externo chamado por Rundeck" name="PARAMETRODATAINICIO" prompt="PARAMETRODATAINICIO?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  </talendfile:ContextType>
+</xmi:XMI>

@@ -1,0 +1,80 @@
+{
+  "itemId" : "_H9mOcA0REe2A6879-FM6Fw",
+  "contextList" : [ {
+    "contextName" : "PRODUCAO",
+    "repoId" : "_DsNxgAduEe2mwrIUnyru9w",
+    "parameterList" : [ {
+      "id" : "_DsVGSAduEe2mwrIUnyru9w",
+      "name" : "DW_DBNAME"
+    }, {
+      "id" : "_DsVGRwduEe2mwrIUnyru9w",
+      "name" : "DW_HOST"
+    }, {
+      "id" : "_DsVGSwduEe2mwrIUnyru9w",
+      "name" : "DW_PORT"
+    }, {
+      "id" : "_-l09IweGEe2mwrIUnyru9w",
+      "name" : "DW_PWD"
+    }, {
+      "id" : "_-l09IgeGEe2mwrIUnyru9w",
+      "name" : "DW_USER"
+    } ]
+  }, {
+    "contextName" : "PRODUCAO",
+    "repoId" : "_BP5WsAeHEe2mwrIUnyru9w",
+    "parameterList" : [ {
+      "id" : "_DsVGSAduEe2mwrIUnyru9w",
+      "name" : "STG_DBNAME"
+    }, {
+      "id" : "_DsVGRwduEe2mwrIUnyru9w",
+      "name" : "STG_HOST"
+    }, {
+      "id" : "_DsVGSwduEe2mwrIUnyru9w",
+      "name" : "STG_PORT"
+    }, {
+      "id" : "_DsVGSgduEe2mwrIUnyru9w",
+      "name" : "STG_PWD"
+    }, {
+      "id" : "_DsVGSQduEe2mwrIUnyru9w",
+      "name" : "STG_USER"
+    } ]
+  }, {
+    "contextName" : "HOMOLOGACAO",
+    "repoId" : "_DsNxgAduEe2mwrIUnyru9w",
+    "parameterList" : [ {
+      "id" : "_DsVGQgduEe2mwrIUnyru9w",
+      "name" : "DW_DBNAME"
+    }, {
+      "id" : "_DsVGQQduEe2mwrIUnyru9w",
+      "name" : "DW_HOST"
+    }, {
+      "id" : "_DsVGRQduEe2mwrIUnyru9w",
+      "name" : "DW_PORT"
+    }, {
+      "id" : "_-l09IQeGEe2mwrIUnyru9w",
+      "name" : "DW_PWD"
+    }, {
+      "id" : "_-l09IAeGEe2mwrIUnyru9w",
+      "name" : "DW_USER"
+    } ]
+  }, {
+    "contextName" : "HOMOLOGACAO",
+    "repoId" : "_BP5WsAeHEe2mwrIUnyru9w",
+    "parameterList" : [ {
+      "id" : "_DsVGQgduEe2mwrIUnyru9w",
+      "name" : "STG_DBNAME"
+    }, {
+      "id" : "_DsVGQQduEe2mwrIUnyru9w",
+      "name" : "STG_HOST"
+    }, {
+      "id" : "_DsVGRQduEe2mwrIUnyru9w",
+      "name" : "STG_PORT"
+    }, {
+      "id" : "_DsVGRAduEe2mwrIUnyru9w",
+      "name" : "STG_PWD"
+    }, {
+      "id" : "_DsVGQwduEe2mwrIUnyru9w",
+      "name" : "STG_USER"
+    } ]
+  } ]
+}

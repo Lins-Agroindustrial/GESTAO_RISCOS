@@ -1,0 +1,1165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="HOMOLOGACAO" jobType="Standard">
+  <context confirmationNeeded="false" name="PRODUCAO">
+    <contextParameter comment="" name="DW_DBNAME" prompt="DW_DBNAME?" promptNeeded="false" repositoryContextId="_DsNxgAduEe2mwrIUnyru9w" type="id_String" value="prod02" internalId="_Y3JT0PwPEe6Wla9xt2O7Sw"/>
+    <contextParameter comment="" name="DW_HOST" prompt="DW_HOST?" promptNeeded="false" repositoryContextId="_DsNxgAduEe2mwrIUnyru9w" type="id_String" value="bdprod02.work.local" internalId="_Y3JT0fwPEe6Wla9xt2O7Sw"/>
+    <contextParameter comment="" name="DW_PORT" prompt="DW_PORT?" promptNeeded="false" repositoryContextId="_DsNxgAduEe2mwrIUnyru9w" type="id_String" value="1521" internalId="_Y3JT0vwPEe6Wla9xt2O7Sw"/>
+    <contextParameter comment="" name="DW_PWD" prompt="DW_PWD?" promptNeeded="false" repositoryContextId="_DsNxgAduEe2mwrIUnyru9w" type="id_Password" value="enc:system.encryption.key.v1:TnPF3H95n0kEuxft6i3f84yU05CQLXMmBGWTQ/05r/Tsvzh6" internalId="_Y3JT0_wPEe6Wla9xt2O7Sw"/>
+    <contextParameter comment="" name="DW_USER" prompt="DW_USER?" promptNeeded="false" repositoryContextId="_DsNxgAduEe2mwrIUnyru9w" type="id_String" value="dw" internalId="_Y3JT1PwPEe6Wla9xt2O7Sw"/>
+    <contextParameter comment="" name="DATAHORAPROCESSAMENTO" prompt="DATAHORAPROCESSAMENTO?" promptNeeded="false" repositoryContextId="_6iuj4AkiEe2Ax_MwDXx3bg" type="id_String" value="" internalId="_Y3JT1fwPEe6Wla9xt2O7Sw"/>
+    <contextParameter comment="" name="STG_DBNAME" prompt="STG_DBNAME?" promptNeeded="false" repositoryContextId="_BP5WsAeHEe2mwrIUnyru9w" type="id_String" value="prod02" internalId="_Y3JT1vwPEe6Wla9xt2O7Sw"/>
+    <contextParameter comment="" name="STG_HOST" prompt="STG_HOST?" promptNeeded="false" repositoryContextId="_BP5WsAeHEe2mwrIUnyru9w" type="id_String" value="bdprod02.work.local" internalId="_Y3JT1_wPEe6Wla9xt2O7Sw"/>
+    <contextParameter comment="" name="STG_PORT" prompt="STG_PORT?" promptNeeded="false" repositoryContextId="_BP5WsAeHEe2mwrIUnyru9w" type="id_String" value="1521" internalId="_Y3JT2PwPEe6Wla9xt2O7Sw"/>
+    <contextParameter comment="" name="STG_PWD" prompt="STG_PWD?" promptNeeded="false" repositoryContextId="_BP5WsAeHEe2mwrIUnyru9w" type="id_Password" value="enc:system.encryption.key.v1:7/iH2IkHMl4BvZkeJgRl86nY0O/PEccCLhRhl3NZkrProjJp" internalId="_Y3JT2fwPEe6Wla9xt2O7Sw"/>
+    <contextParameter comment="" name="STG_USER" prompt="STG_USER?" promptNeeded="false" repositoryContextId="_BP5WsAeHEe2mwrIUnyru9w" type="id_String" value="dw_stage" internalId="_Y3JT2vwPEe6Wla9xt2O7Sw"/>
+  </context>
+  <context confirmationNeeded="false" name="HOMOLOGACAO">
+    <contextParameter comment="" name="DW_DBNAME" prompt="DW_DBNAME?" promptNeeded="false" repositoryContextId="_DsNxgAduEe2mwrIUnyru9w" type="id_String" value="prod02" internalId="_Y3JT2_wPEe6Wla9xt2O7Sw"/>
+    <contextParameter comment="" name="DW_HOST" prompt="DW_HOST?" promptNeeded="false" repositoryContextId="_DsNxgAduEe2mwrIUnyru9w" type="id_String" value="bdprod02.work.local" internalId="_Y3JT3PwPEe6Wla9xt2O7Sw"/>
+    <contextParameter comment="" name="DW_PORT" prompt="DW_PORT?" promptNeeded="false" repositoryContextId="_DsNxgAduEe2mwrIUnyru9w" type="id_String" value="1521" internalId="_Y3JT3fwPEe6Wla9xt2O7Sw"/>
+    <contextParameter comment="" name="DW_PWD" prompt="DW_PWD?" promptNeeded="false" repositoryContextId="_DsNxgAduEe2mwrIUnyru9w" type="id_Password" value="enc:system.encryption.key.v1:s10k2CEvlTx2QzZ7+2kYYF98YcU8qMEfVrVii1g8zYW87aui" internalId="_Y3JT3vwPEe6Wla9xt2O7Sw"/>
+    <contextParameter comment="" name="DW_USER" prompt="DW_USER?" promptNeeded="false" repositoryContextId="_DsNxgAduEe2mwrIUnyru9w" type="id_String" value="dw" internalId="_Y3JT3_wPEe6Wla9xt2O7Sw"/>
+    <contextParameter comment="" name="DATAHORAPROCESSAMENTO" prompt="DATAHORAPROCESSAMENTO?" promptNeeded="true" repositoryContextId="_6iuj4AkiEe2Ax_MwDXx3bg" type="id_String" value="2024-04-17 00:00:00" internalId="_Y3JT4PwPEe6Wla9xt2O7Sw"/>
+    <contextParameter comment="" name="STG_DBNAME" prompt="STG_DBNAME?" promptNeeded="false" repositoryContextId="_BP5WsAeHEe2mwrIUnyru9w" type="id_String" value="prod02" internalId="_Y3JT4fwPEe6Wla9xt2O7Sw"/>
+    <contextParameter comment="" name="STG_HOST" prompt="STG_HOST?" promptNeeded="false" repositoryContextId="_BP5WsAeHEe2mwrIUnyru9w" type="id_String" value="bdprod02.work.local" internalId="_Y3JT4vwPEe6Wla9xt2O7Sw"/>
+    <contextParameter comment="" name="STG_PORT" prompt="STG_PORT?" promptNeeded="false" repositoryContextId="_BP5WsAeHEe2mwrIUnyru9w" type="id_String" value="1521" internalId="_Y3JT4_wPEe6Wla9xt2O7Sw"/>
+    <contextParameter comment="" name="STG_PWD" prompt="STG_PWD?" promptNeeded="false" repositoryContextId="_BP5WsAeHEe2mwrIUnyru9w" type="id_Password" value="enc:system.encryption.key.v1:ZuYRo7/rrLFf0KK9825deWTOK5V/xX5J9JXd9ksK/jK2s7BQ" internalId="_Y3JT5PwPEe6Wla9xt2O7Sw"/>
+    <contextParameter comment="" name="STG_USER" prompt="STG_USER?" promptNeeded="false" repositoryContextId="_BP5WsAeHEe2mwrIUnyru9w" type="id_String" value="dw_stage" internalId="_Y3JT5fwPEe6Wla9xt2O7Sw"/>
+  </context>
+  <parameters>
+    <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" value="" show="false"/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="OVERRIDE_ENCODING_FLAG" value="false" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="OVERRIDE_ENCODING_IN_EXTRA" value="ISO-8859-15" show="false"/>
+    <elementParameter field="TECHNICAL" name="OVERRIDE_ENCODING_IN_EXTRA:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:nlD3abZdEFP7YuIClELzwDB/VRKG/jm9UM1yEwvi" show="false"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false" show="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;C:/TALEND/WORKSPACE/.metadata&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="ISO-8859-15" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="false" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" value="tJDBCOutput" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_12" show="false"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:v/aEg2oLPuI6hDpUM1cMUBafcNMp7w2Xql+qq2jy" show="false"/>
+    <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" value="" show="false"/>
+    <routinesParameter id="_cwoqgAdpEe2mwrIUnyru9w" name="DataOperation"/>
+    <routinesParameter id="_cxOgYAdpEe2mwrIUnyru9w" name="Mathematical"/>
+    <routinesParameter id="_cxYRYAdpEe2mwrIUnyru9w" name="Numeric"/>
+    <routinesParameter id="_cxrMUAdpEe2mwrIUnyru9w" name="Relational"/>
+    <routinesParameter id="_cx5OwAdpEe2mwrIUnyru9w" name="StringHandling"/>
+    <routinesParameter id="_cyMJsAdpEe2mwrIUnyru9w" name="TalendDataGenerator"/>
+    <routinesParameter id="_cyV6sAdpEe2mwrIUnyru9w" name="TalendDate"/>
+    <routinesParameter id="_cyo1oAdpEe2mwrIUnyru9w" name="TalendString"/>
+    <routinesParameter id="_cyympgdpEe2mwrIUnyru9w" name="TalendStringUtil"/>
+  </parameters>
+  <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="2" offsetLabelY="9" posX="384" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="544" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="System.out.println(jobName + &quot; - v&quot; + jobVersion  + &quot; - BEGIN (&quot; + context.STG_DBNAME + &quot;/&quot; + context.STG_USER + &quot;): &quot; + TalendDate.getDate(&quot;CCYY-MM-DD hh:mm:ss&quot;));&#xA;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_1"/>
+  </node>
+  <node componentName="tPostjob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="704" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="864" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_2" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="System.out.println(jobName + &quot; - END: &quot; + TalendDate.getDate(&quot;CCYY-MM-DD hh:mm:ss&quot;));"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_2"/>
+  </node>
+  <node componentName="tOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_1" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SID"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_11"/>
+    <elementParameter field="TEXT" name="RAC_URL" value="&quot;10.149.0.106&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="context.STG_HOST"/>
+    <elementParameter field="TEXT" name="TYPE" value="ORACLE_SID" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="context.STG_PORT"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.STG_DBNAME"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;prod&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="context.STG_USER"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:0/nPBb1ZgfqhPAGvQn+WuPWNj5Fv+2uBHrH4oLiSCIE0FqgvyX8WSNNCQg=="/>
+    <elementParameter field="TEXT" name="JDBC_URL" value="&quot;jdbc:oracle:oci:/@talend&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;SELECT &#xD;&#xA;        TO_CHAR(TO_DATE(&#xD;&#xA;        CASE &#xD;&#xA;          WHEN LENGTH(DATA) = 8 THEN&#xD;&#xA;            DATA&#xD;&#xA;          WHEN LENGTH(DATA) = 7 AND INSTR(DATA,'/') = 2 THEN&#xD;&#xA;            '0' || DATA &#xD;&#xA;          WHEN LENGTH(DATA) = 7 AND INSTR(DATA,'/') = 3 THEN&#xD;&#xA;            SUBSTR(DATA,1,3) || '0' ||  SUBSTR(DATA,-4,4) &#xD;&#xA;          WHEN LENGTH(DATA) = 6 AND INSTR(DATA,'/') = 2 THEN&#xD;&#xA;            '0' || SUBSTR(DATA,1,1) || '/0' || SUBSTR( DATA,-4,4) &#xD;&#xA;        ELSE &#xD;&#xA;            NULL  &#xD;&#xA;        END ,'MM/dd/YY'),'yyyy-MM-dd') AS DT_REFERENCIA,&#xD;&#xA;        CASE WHEN LENGTH(ETHJ19) - LENGTH(REPLACE(ETHJ19, '.', '')) >= 1 AND LENGTH(ETHJ19) - LENGTH(REPLACE(ETHJ19, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHJ19, ',',''),'.',',') ELSE REPLACE(ETHJ19,'.',',') END AS ETHJ19,&#xD;&#xA;        CASE WHEN LENGTH(ETHK19) - LENGTH(REPLACE(ETHK19, '.', '')) >= 1 AND LENGTH(ETHK19) - LENGTH(REPLACE(ETHK19, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHK19, ',',''),'.',',') ELSE REPLACE(ETHK19,'.',',') END AS ETHK19,&#xD;&#xA;        CASE WHEN LENGTH(ETHM19) - LENGTH(REPLACE(ETHM19, '.', '')) >= 1 AND LENGTH(ETHM19) - LENGTH(REPLACE(ETHM19, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHM19, ',',''),'.',',') ELSE REPLACE(ETHM19,'.',',') END AS ETHM19,&#xD;&#xA;        CASE WHEN LENGTH(ETHN19) - LENGTH(REPLACE(ETHN19, '.', '')) >= 1 AND LENGTH(ETHN19) - LENGTH(REPLACE(ETHN19, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHN19, ',',''),'.',',') ELSE REPLACE(ETHN19,'.',',') END AS ETHN19,&#xD;&#xA;        CASE WHEN LENGTH(ETHQ19) - LENGTH(REPLACE(ETHQ19, '.', '')) >= 1 AND LENGTH(ETHQ19) - LENGTH(REPLACE(ETHQ19, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHQ19, ',',''),'.',',') ELSE REPLACE(ETHQ19,'.',',') END AS ETHQ19,&#xD;&#xA;        CASE WHEN LENGTH(ETHU19) - LENGTH(REPLACE(ETHU19, '.', '')) >= 1 AND LENGTH(ETHU19) - LENGTH(REPLACE(ETHU19, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHU19, ',',''),'.',',') ELSE REPLACE(ETHU19,'.',',') END AS ETHU19,&#xD;&#xA;        CASE WHEN LENGTH(ETHV19) - LENGTH(REPLACE(ETHV19, '.', '')) >= 1 AND LENGTH(ETHV19) - LENGTH(REPLACE(ETHV19, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHV19, ',',''),'.',',') ELSE REPLACE(ETHV19,'.',',') END AS ETHV19,&#xD;&#xA;        CASE WHEN LENGTH(ETHX19) - LENGTH(REPLACE(ETHX19, '.', '')) >= 1 AND LENGTH(ETHX19) - LENGTH(REPLACE(ETHX19, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHX19, ',',''),'.',',') ELSE REPLACE(ETHX19,'.',',') END AS ETHX19,&#xD;&#xA;        CASE WHEN LENGTH(ETHZ19) - LENGTH(REPLACE(ETHZ19, '.', '')) >= 1 AND LENGTH(ETHZ19) - LENGTH(REPLACE(ETHZ19, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHZ19, ',',''),'.',',') ELSE REPLACE(ETHZ19,'.',',') END AS ETHZ19,&#xD;&#xA;        CASE WHEN LENGTH(ETHF20) - LENGTH(REPLACE(ETHF20, '.', '')) >= 1 AND LENGTH(ETHF20) - LENGTH(REPLACE(ETHF20, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHF20, ',',''),'.',',') ELSE REPLACE(ETHF20,'.',',') END AS ETHF20,&#xD;&#xA;        CASE WHEN LENGTH(ETHG20) - LENGTH(REPLACE(ETHG20, '.', '')) >= 1 AND LENGTH(ETHG20) - LENGTH(REPLACE(ETHG20, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHG20, ',',''),'.',',') ELSE REPLACE(ETHG20,'.',',') END AS ETHG20,&#xD;&#xA;        CASE WHEN LENGTH(ETHH20) - LENGTH(REPLACE(ETHH20, '.', '')) >= 1 AND LENGTH(ETHH20) - LENGTH(REPLACE(ETHH20, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHH20, ',',''),'.',',') ELSE REPLACE(ETHH20,'.',',') END AS ETHH20,&#xD;&#xA;        CASE WHEN LENGTH(ETHJ20) - LENGTH(REPLACE(ETHJ20, '.', '')) >= 1 AND LENGTH(ETHJ20) - LENGTH(REPLACE(ETHJ20, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHJ20, ',',''),'.',',') ELSE REPLACE(ETHJ20,'.',',') END AS ETHJ20,&#xD;&#xA;        CASE WHEN LENGTH(ETHK20) - LENGTH(REPLACE(ETHK20, '.', '')) >= 1 AND LENGTH(ETHK20) - LENGTH(REPLACE(ETHK20, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHK20, ',',''),'.',',') ELSE REPLACE(ETHK20,'.',',') END AS ETHK20,&#xD;&#xA;        CASE WHEN LENGTH(ETHM20) - LENGTH(REPLACE(ETHM20, '.', '')) >= 1 AND LENGTH(ETHM20) - LENGTH(REPLACE(ETHM20, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHM20, ',',''),'.',',') ELSE REPLACE(ETHM20,'.',',') END AS ETHM20,&#xD;&#xA;        CASE WHEN LENGTH(ETHN20) - LENGTH(REPLACE(ETHN20, '.', '')) >= 1 AND LENGTH(ETHN20) - LENGTH(REPLACE(ETHN20, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHN20, ',',''),'.',',') ELSE REPLACE(ETHN20,'.',',') END AS ETHN20,&#xD;&#xA;        CASE WHEN LENGTH(ETHQ20) - LENGTH(REPLACE(ETHQ20, '.', '')) >= 1 AND LENGTH(ETHQ20) - LENGTH(REPLACE(ETHQ20, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHQ20, ',',''),'.',',') ELSE REPLACE(ETHQ20,'.',',') END AS ETHQ20,&#xD;&#xA;        CASE WHEN LENGTH(ETHU20) - LENGTH(REPLACE(ETHU20, '.', '')) >= 1 AND LENGTH(ETHU20) - LENGTH(REPLACE(ETHU20, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHU20, ',',''),'.',',') ELSE REPLACE(ETHU20,'.',',') END AS ETHU20,&#xD;&#xA;        CASE WHEN LENGTH(ETHV20) - LENGTH(REPLACE(ETHV20, '.', '')) >= 1 AND LENGTH(ETHV20) - LENGTH(REPLACE(ETHV20, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHV20, ',',''),'.',',') ELSE REPLACE(ETHV20,'.',',') END AS ETHV20,&#xD;&#xA;        CASE WHEN LENGTH(ETHX20) - LENGTH(REPLACE(ETHX20, '.', '')) >= 1 AND LENGTH(ETHX20) - LENGTH(REPLACE(ETHX20, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHX20, ',',''),'.',',') ELSE REPLACE(ETHX20,'.',',') END AS ETHX20,&#xD;&#xA;        CASE WHEN LENGTH(ETHZ20) - LENGTH(REPLACE(ETHZ20, '.', '')) >= 1 AND LENGTH(ETHZ20) - LENGTH(REPLACE(ETHZ20, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHZ20, ',',''),'.',',') ELSE REPLACE(ETHZ20,'.',',') END AS ETHZ20,&#xD;&#xA;        CASE WHEN LENGTH(ETHF21) - LENGTH(REPLACE(ETHF21, '.', '')) >= 1 AND LENGTH(ETHF21) - LENGTH(REPLACE(ETHF21, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHF21, ',',''),'.',',') ELSE REPLACE(ETHF21,'.',',') END AS ETHF21,&#xD;&#xA;        CASE WHEN LENGTH(ETHG21) - LENGTH(REPLACE(ETHG21, '.', '')) >= 1 AND LENGTH(ETHG21) - LENGTH(REPLACE(ETHG21, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHG21, ',',''),'.',',') ELSE REPLACE(ETHG21,'.',',') END AS ETHG21,&#xD;&#xA;        CASE WHEN LENGTH(ETHH21) - LENGTH(REPLACE(ETHH21, '.', '')) >= 1 AND LENGTH(ETHH21) - LENGTH(REPLACE(ETHH21, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHH21, ',',''),'.',',') ELSE REPLACE(ETHH21,'.',',') END AS ETHH21,&#xD;&#xA;        CASE WHEN LENGTH(ETHJ21) - LENGTH(REPLACE(ETHJ21, '.', '')) >= 1 AND LENGTH(ETHJ21) - LENGTH(REPLACE(ETHJ21, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHJ21, ',',''),'.',',') ELSE REPLACE(ETHJ21,'.',',') END AS ETHJ21,&#xD;&#xA;        CASE WHEN LENGTH(ETHK21) - LENGTH(REPLACE(ETHK21, '.', '')) >= 1 AND LENGTH(ETHK21) - LENGTH(REPLACE(ETHK21, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHK21, ',',''),'.',',') ELSE REPLACE(ETHK21,'.',',') END AS ETHK21,&#xD;&#xA;        CASE WHEN LENGTH(ETHM21) - LENGTH(REPLACE(ETHM21, '.', '')) >= 1 AND LENGTH(ETHM21) - LENGTH(REPLACE(ETHM21, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHM21, ',',''),'.',',') ELSE REPLACE(ETHM21,'.',',') END AS ETHM21,&#xD;&#xA;        CASE WHEN LENGTH(ETHN21) - LENGTH(REPLACE(ETHN21, '.', '')) >= 1 AND LENGTH(ETHN21) - LENGTH(REPLACE(ETHN21, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHN21, ',',''),'.',',') ELSE REPLACE(ETHN21,'.',',') END AS ETHN21,&#xD;&#xA;        CASE WHEN LENGTH(ETHQ21) - LENGTH(REPLACE(ETHQ21, '.', '')) >= 1 AND LENGTH(ETHQ21) - LENGTH(REPLACE(ETHQ21, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHQ21, ',',''),'.',',') ELSE REPLACE(ETHQ21,'.',',') END AS ETHQ21,&#xD;&#xA;        CASE WHEN LENGTH(ETHU21) - LENGTH(REPLACE(ETHU21, '.', '')) >= 1 AND LENGTH(ETHU21) - LENGTH(REPLACE(ETHU21, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHU21, ',',''),'.',',') ELSE REPLACE(ETHU21,'.',',') END AS ETHU21,&#xD;&#xA;        CASE WHEN LENGTH(ETHV21) - LENGTH(REPLACE(ETHV21, '.', '')) >= 1 AND LENGTH(ETHV21) - LENGTH(REPLACE(ETHV21, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHV21, ',',''),'.',',') ELSE REPLACE(ETHV21,'.',',') END AS ETHV21,&#xD;&#xA;        CASE WHEN LENGTH(ETHX21) - LENGTH(REPLACE(ETHX21, '.', '')) >= 1 AND LENGTH(ETHX21) - LENGTH(REPLACE(ETHX21, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHX21, ',',''),'.',',') ELSE REPLACE(ETHX21,'.',',') END AS ETHX21,&#xD;&#xA;        CASE WHEN LENGTH(ETHZ21) - LENGTH(REPLACE(ETHZ21, '.', '')) >= 1 AND LENGTH(ETHZ21) - LENGTH(REPLACE(ETHZ21, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHZ21, ',',''),'.',',') ELSE REPLACE(ETHZ21,'.',',') END AS ETHZ21,&#xD;&#xA;        CASE WHEN LENGTH(ETHF22) - LENGTH(REPLACE(ETHF22, '.', '')) >= 1 AND LENGTH(ETHF22) - LENGTH(REPLACE(ETHF22, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHF22, ',',''),'.',',') ELSE REPLACE(ETHF22,'.',',') END AS ETHF22,&#xD;&#xA;        CASE WHEN LENGTH(ETHG22) - LENGTH(REPLACE(ETHG22, '.', '')) >= 1 AND LENGTH(ETHG22) - LENGTH(REPLACE(ETHG22, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHG22, ',',''),'.',',') ELSE REPLACE(ETHG22,'.',',') END AS ETHG22,&#xD;&#xA;        CASE WHEN LENGTH(ETHH22) - LENGTH(REPLACE(ETHH22, '.', '')) >= 1 AND LENGTH(ETHH22) - LENGTH(REPLACE(ETHH22, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHH22, ',',''),'.',',') ELSE REPLACE(ETHH22,'.',',') END AS ETHH22,&#xD;&#xA;        CASE WHEN LENGTH(ETHJ22) - LENGTH(REPLACE(ETHJ22, '.', '')) >= 1 AND LENGTH(ETHJ22) - LENGTH(REPLACE(ETHJ22, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHJ22, ',',''),'.',',') ELSE REPLACE(ETHJ22,'.',',') END AS ETHJ22,&#xD;&#xA;        CASE WHEN LENGTH(ETHK22) - LENGTH(REPLACE(ETHK22, '.', '')) >= 1 AND LENGTH(ETHK22) - LENGTH(REPLACE(ETHK22, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHK22, ',',''),'.',',') ELSE REPLACE(ETHK22,'.',',') END AS ETHK22,&#xD;&#xA;        CASE WHEN LENGTH(ETHM22) - LENGTH(REPLACE(ETHM22, '.', '')) >= 1 AND LENGTH(ETHM22) - LENGTH(REPLACE(ETHM22, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHM22, ',',''),'.',',') ELSE REPLACE(ETHM22,'.',',') END AS ETHM22,&#xD;&#xA;        CASE WHEN LENGTH(ETHN22) - LENGTH(REPLACE(ETHN22, '.', '')) >= 1 AND LENGTH(ETHN22) - LENGTH(REPLACE(ETHN22, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHN22, ',',''),'.',',') ELSE REPLACE(ETHN22,'.',',') END AS ETHN22,&#xD;&#xA;        CASE WHEN LENGTH(ETHQ22) - LENGTH(REPLACE(ETHQ22, '.', '')) >= 1 AND LENGTH(ETHQ22) - LENGTH(REPLACE(ETHQ22, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHQ22, ',',''),'.',',') ELSE REPLACE(ETHQ22,'.',',') END AS ETHQ22,&#xD;&#xA;        CASE WHEN LENGTH(ETHU22) - LENGTH(REPLACE(ETHU22, '.', '')) >= 1 AND LENGTH(ETHU22) - LENGTH(REPLACE(ETHU22, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHU22, ',',''),'.',',') ELSE REPLACE(ETHU22,'.',',') END AS ETHU22,&#xD;&#xA;        CASE WHEN LENGTH(ETHV22) - LENGTH(REPLACE(ETHV22, '.', '')) >= 1 AND LENGTH(ETHV22) - LENGTH(REPLACE(ETHV22, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHV22, ',',''),'.',',') ELSE REPLACE(ETHV22,'.',',') END AS ETHV22,&#xD;&#xA;        CASE WHEN LENGTH(ETHX22) - LENGTH(REPLACE(ETHX22, '.', '')) >= 1 AND LENGTH(ETHX22) - LENGTH(REPLACE(ETHX22, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHX22, ',',''),'.',',') ELSE REPLACE(ETHX22,'.',',') END AS ETHX22,&#xD;&#xA;        CASE WHEN LENGTH(ETHZ22) - LENGTH(REPLACE(ETHZ22, '.', '')) >= 1 AND LENGTH(ETHZ22) - LENGTH(REPLACE(ETHZ22, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHZ22, ',',''),'.',',') ELSE REPLACE(ETHZ22,'.',',') END AS ETHZ22,&#xD;&#xA;        CASE WHEN LENGTH(ETHF23) - LENGTH(REPLACE(ETHF23, '.', '')) >= 1 AND LENGTH(ETHF23) - LENGTH(REPLACE(ETHF23, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHF23, ',',''),'.',',') ELSE REPLACE(ETHF23,'.',',') END AS ETHF23,&#xD;&#xA;        CASE WHEN LENGTH(ETHG23) - LENGTH(REPLACE(ETHG23, '.', '')) >= 1 AND LENGTH(ETHG23) - LENGTH(REPLACE(ETHG23, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHG23, ',',''),'.',',') ELSE REPLACE(ETHG23,'.',',') END AS ETHG23,&#xD;&#xA;        CASE WHEN LENGTH(ETHH23) - LENGTH(REPLACE(ETHH23, '.', '')) >= 1 AND LENGTH(ETHH23) - LENGTH(REPLACE(ETHH23, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHH23, ',',''),'.',',') ELSE REPLACE(ETHH23,'.',',') END AS ETHH23,&#xD;&#xA;        CASE WHEN LENGTH(ETHJ23) - LENGTH(REPLACE(ETHJ23, '.', '')) >= 1 AND LENGTH(ETHJ23) - LENGTH(REPLACE(ETHJ23, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHJ23, ',',''),'.',',') ELSE REPLACE(ETHJ23,'.',',') END AS ETHJ23,&#xD;&#xA;        CASE WHEN LENGTH(ETHK3) - LENGTH(REPLACE(ETHK3, '.', '')) >= 1 AND LENGTH(ETHK3) - LENGTH(REPLACE(ETHK3, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHK3, ',',''),'.',',') ELSE REPLACE(ETHK3,'.',',') END AS ETHK3,&#xD;&#xA;        CASE WHEN LENGTH(ETHM23) - LENGTH(REPLACE(ETHM23, '.', '')) >= 1 AND LENGTH(ETHM23) - LENGTH(REPLACE(ETHM23, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHM23, ',',''),'.',',') ELSE REPLACE(ETHM23,'.',',') END AS ETHM23,&#xD;&#xA;        CASE WHEN LENGTH(ETHN23) - LENGTH(REPLACE(ETHN23, '.', '')) >= 1 AND LENGTH(ETHN23) - LENGTH(REPLACE(ETHN23, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHN23, ',',''),'.',',') ELSE REPLACE(ETHN23,'.',',') END AS ETHN23,&#xD;&#xA;        CASE WHEN LENGTH(ETHQ23) - LENGTH(REPLACE(ETHQ23, '.', '')) >= 1 AND LENGTH(ETHQ23) - LENGTH(REPLACE(ETHQ23, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHQ23, ',',''),'.',',') ELSE REPLACE(ETHQ23,'.',',') END AS ETHQ23,&#xD;&#xA;        CASE WHEN LENGTH(ETHU23) - LENGTH(REPLACE(ETHU23, '.', '')) >= 1 AND LENGTH(ETHU23) - LENGTH(REPLACE(ETHU23, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHU23, ',',''),'.',',') ELSE REPLACE(ETHU23,'.',',') END AS ETHU23,&#xD;&#xA;        CASE WHEN LENGTH(ETHV23) - LENGTH(REPLACE(ETHV23, '.', '')) >= 1 AND LENGTH(ETHV23) - LENGTH(REPLACE(ETHV23, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHV23, ',',''),'.',',') ELSE REPLACE(ETHV23,'.',',') END AS ETHV23,&#xD;&#xA;        CASE WHEN LENGTH(ETHX23) - LENGTH(REPLACE(ETHX23, '.', '')) >= 1 AND LENGTH(ETHX23) - LENGTH(REPLACE(ETHX23, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHX23, ',',''),'.',',') ELSE REPLACE(ETHX23,'.',',') END AS ETHX23,&#xD;&#xA;        CASE WHEN LENGTH(ETHZ23) - LENGTH(REPLACE(ETHZ23, '.', '')) >= 1 AND LENGTH(ETHZ23) - LENGTH(REPLACE(ETHZ23, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHZ23, ',',''),'.',',') ELSE REPLACE(ETHZ23,'.',',') END AS ETHZ23,&#xD;&#xA;        CASE WHEN LENGTH(ETHF24) - LENGTH(REPLACE(ETHF24, '.', '')) >= 1 AND LENGTH(ETHF24) - LENGTH(REPLACE(ETHF24, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHF24, ',',''),'.',',') ELSE REPLACE(ETHF24,'.',',') END AS ETHF24,&#xD;&#xA;        CASE WHEN LENGTH(ETHG24) - LENGTH(REPLACE(ETHG24, '.', '')) >= 1 AND LENGTH(ETHG24) - LENGTH(REPLACE(ETHG24, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHG24, ',',''),'.',',') ELSE REPLACE(ETHG24,'.',',') END AS ETHG24,&#xD;&#xA;        CASE WHEN LENGTH(ETHH24) - LENGTH(REPLACE(ETHH24, '.', '')) >= 1 AND LENGTH(ETHH24) - LENGTH(REPLACE(ETHH24, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHH24, ',',''),'.',',') ELSE REPLACE(ETHH24,'.',',') END AS ETHH24,&#xD;&#xA;        CASE WHEN LENGTH(ETHJ24) - LENGTH(REPLACE(ETHJ24, '.', '')) >= 1 AND LENGTH(ETHJ24) - LENGTH(REPLACE(ETHJ24, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHJ24, ',',''),'.',',') ELSE REPLACE(ETHJ24,'.',',') END AS ETHJ24,&#xD;&#xA;        CASE WHEN LENGTH(ETHK24) - LENGTH(REPLACE(ETHK24, '.', '')) >= 1 AND LENGTH(ETHK24) - LENGTH(REPLACE(ETHK24, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHK24, ',',''),'.',',') ELSE REPLACE(ETHK24,'.',',') END AS ETHK24,&#xD;&#xA;        CASE WHEN LENGTH(ETHM24) - LENGTH(REPLACE(ETHM24, '.', '')) >= 1 AND LENGTH(ETHM24) - LENGTH(REPLACE(ETHM24, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHM24, ',',''),'.',',') ELSE REPLACE(ETHM24,'.',',') END AS ETHM24,&#xD;&#xA;        CASE WHEN LENGTH(ETHN24) - LENGTH(REPLACE(ETHN24, '.', '')) >= 1 AND LENGTH(ETHN24) - LENGTH(REPLACE(ETHN24, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHN24, ',',''),'.',',') ELSE REPLACE(ETHN24,'.',',') END AS ETHN24,&#xD;&#xA;        CASE WHEN LENGTH(ETHQ24) - LENGTH(REPLACE(ETHQ24, '.', '')) >= 1 AND LENGTH(ETHQ24) - LENGTH(REPLACE(ETHQ24, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHQ24, ',',''),'.',',') ELSE REPLACE(ETHQ24,'.',',') END AS ETHQ24,&#xD;&#xA;        CASE WHEN LENGTH(ETHU24) - LENGTH(REPLACE(ETHU24, '.', '')) >= 1 AND LENGTH(ETHU24) - LENGTH(REPLACE(ETHU24, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHU24, ',',''),'.',',') ELSE REPLACE(ETHU24,'.',',') END AS ETHU24,&#xD;&#xA;        CASE WHEN LENGTH(ETHV24) - LENGTH(REPLACE(ETHV24, '.', '')) >= 1 AND LENGTH(ETHV24) - LENGTH(REPLACE(ETHV24, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHV24, ',',''),'.',',') ELSE REPLACE(ETHV24,'.',',') END AS ETHV24,&#xD;&#xA;        CASE WHEN LENGTH(ETHX24) - LENGTH(REPLACE(ETHX24, '.', '')) >= 1 AND LENGTH(ETHX24) - LENGTH(REPLACE(ETHX24, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHX24, ',',''),'.',',') ELSE REPLACE(ETHX24,'.',',') END AS ETHX24,&#xD;&#xA;        CASE WHEN LENGTH(ETHZ24) - LENGTH(REPLACE(ETHZ24, '.', '')) >= 1 AND LENGTH(ETHZ24) - LENGTH(REPLACE(ETHZ24, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHZ24, ',',''),'.',',') ELSE REPLACE(ETHZ24,'.',',') END AS ETHZ24,&#xD;&#xA;        CASE WHEN LENGTH(ETHF25) - LENGTH(REPLACE(ETHF25, '.', '')) >= 1 AND LENGTH(ETHF25) - LENGTH(REPLACE(ETHF25, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHF25, ',',''),'.',',') ELSE REPLACE(ETHF25,'.',',') END AS ETHF25,&#xD;&#xA;        CASE WHEN LENGTH(ETHG25) - LENGTH(REPLACE(ETHG25, '.', '')) >= 1 AND LENGTH(ETHG25) - LENGTH(REPLACE(ETHG25, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHG25, ',',''),'.',',') ELSE REPLACE(ETHG25,'.',',') END AS ETHG25,&#xD;&#xA;        CASE WHEN LENGTH(ETHH25) - LENGTH(REPLACE(ETHH25, '.', '')) >= 1 AND LENGTH(ETHH25) - LENGTH(REPLACE(ETHH25, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHH25, ',',''),'.',',') ELSE REPLACE(ETHH25,'.',',') END AS ETHH25,&#xD;&#xA;        CASE WHEN LENGTH(ETHJ25) - LENGTH(REPLACE(ETHJ25, '.', '')) >= 1 AND LENGTH(ETHJ25) - LENGTH(REPLACE(ETHJ25, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHJ25, ',',''),'.',',') ELSE REPLACE(ETHJ25,'.',',') END AS ETHJ25,&#xD;&#xA;        CASE WHEN LENGTH(ETHK25) - LENGTH(REPLACE(ETHK25, '.', '')) >= 1 AND LENGTH(ETHK25) - LENGTH(REPLACE(ETHK25, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHK25, ',',''),'.',',') ELSE REPLACE(ETHK25,'.',',') END AS ETHK25,&#xD;&#xA;        CASE WHEN LENGTH(ETHM25) - LENGTH(REPLACE(ETHM25, '.', '')) >= 1 AND LENGTH(ETHM25) - LENGTH(REPLACE(ETHM25, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHM25, ',',''),'.',',') ELSE REPLACE(ETHM25,'.',',') END AS ETHM25,&#xD;&#xA;        CASE WHEN LENGTH(ETHN25) - LENGTH(REPLACE(ETHN25, '.', '')) >= 1 AND LENGTH(ETHN25) - LENGTH(REPLACE(ETHN25, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHN25, ',',''),'.',',') ELSE REPLACE(ETHN25,'.',',') END AS ETHN25,&#xD;&#xA;        CASE WHEN LENGTH(ETHQ25) - LENGTH(REPLACE(ETHQ25, '.', '')) >= 1 AND LENGTH(ETHQ25) - LENGTH(REPLACE(ETHQ25, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHQ25, ',',''),'.',',') ELSE REPLACE(ETHQ25,'.',',') END AS ETHQ25,&#xD;&#xA;        CASE WHEN LENGTH(ETHU25) - LENGTH(REPLACE(ETHU25, '.', '')) >= 1 AND LENGTH(ETHU25) - LENGTH(REPLACE(ETHU25, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHU25, ',',''),'.',',') ELSE REPLACE(ETHU25,'.',',') END AS ETHU25,&#xD;&#xA;        CASE WHEN LENGTH(ETHV25) - LENGTH(REPLACE(ETHV25, '.', '')) >= 1 AND LENGTH(ETHV25) - LENGTH(REPLACE(ETHV25, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHV25, ',',''),'.',',') ELSE REPLACE(ETHV25,'.',',') END AS ETHV25,&#xD;&#xA;        CASE WHEN LENGTH(ETHX25) - LENGTH(REPLACE(ETHX25, '.', '')) >= 1 AND LENGTH(ETHX25) - LENGTH(REPLACE(ETHX25, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHX25, ',',''),'.',',') ELSE REPLACE(ETHX25,'.',',') END AS ETHX25,&#xD;&#xA;        CASE WHEN LENGTH(ETHZ25) - LENGTH(REPLACE(ETHZ25, '.', '')) >= 1 AND LENGTH(ETHZ25) - LENGTH(REPLACE(ETHZ25, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHZ25, ',',''),'.',',') ELSE REPLACE(ETHZ25,'.',',') END AS ETHZ25,&#xD;&#xA;        CASE WHEN LENGTH(ETHF26) - LENGTH(REPLACE(ETHF26, '.', '')) >= 1 AND LENGTH(ETHF26) - LENGTH(REPLACE(ETHF26, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHF26, ',',''),'.',',') ELSE REPLACE(ETHF26,'.',',') END AS ETHF26,&#xD;&#xA;        CASE WHEN LENGTH(ETHG26) - LENGTH(REPLACE(ETHG26, '.', '')) >= 1 AND LENGTH(ETHG26) - LENGTH(REPLACE(ETHG26, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHG26, ',',''),'.',',') ELSE REPLACE(ETHG26,'.',',') END AS ETHG26,&#xD;&#xA;        CASE WHEN LENGTH(ETHH26) - LENGTH(REPLACE(ETHH26, '.', '')) >= 1 AND LENGTH(ETHH26) - LENGTH(REPLACE(ETHH26, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHH26, ',',''),'.',',') ELSE REPLACE(ETHH26,'.',',') END AS ETHH26,&#xD;&#xA;        CASE WHEN LENGTH(ETHJ26) - LENGTH(REPLACE(ETHJ26, '.', '')) >= 1 AND LENGTH(ETHJ26) - LENGTH(REPLACE(ETHJ26, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHJ26, ',',''),'.',',') ELSE REPLACE(ETHJ26,'.',',') END AS ETHJ26,&#xD;&#xA;        CASE WHEN LENGTH(ETHK26) - LENGTH(REPLACE(ETHK26, '.', '')) >= 1 AND LENGTH(ETHK26) - LENGTH(REPLACE(ETHK26, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHK26, ',',''),'.',',') ELSE REPLACE(ETHK26,'.',',') END AS ETHK26,&#xD;&#xA;        CASE WHEN LENGTH(ETHM26) - LENGTH(REPLACE(ETHM26, '.', '')) >= 1 AND LENGTH(ETHM26) - LENGTH(REPLACE(ETHM26, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHM26, ',',''),'.',',') ELSE REPLACE(ETHM26,'.',',') END AS ETHM26,&#xD;&#xA;        CASE WHEN LENGTH(ETHN26) - LENGTH(REPLACE(ETHN26, '.', '')) >= 1 AND LENGTH(ETHN26) - LENGTH(REPLACE(ETHN26, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHN26, ',',''),'.',',') ELSE REPLACE(ETHN26,'.',',') END AS ETHN26,&#xD;&#xA;        CASE WHEN LENGTH(ETHQ26) - LENGTH(REPLACE(ETHQ26, '.', '')) >= 1 AND LENGTH(ETHQ26) - LENGTH(REPLACE(ETHQ26, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHQ26, ',',''),'.',',') ELSE REPLACE(ETHQ26,'.',',') END AS ETHQ26,&#xD;&#xA;        CASE WHEN LENGTH(ETHU26) - LENGTH(REPLACE(ETHU26, '.', '')) >= 1 AND LENGTH(ETHU26) - LENGTH(REPLACE(ETHU26, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHU26, ',',''),'.',',') ELSE REPLACE(ETHU26,'.',',') END AS ETHU26,&#xD;&#xA;        CASE WHEN LENGTH(ETHV26) - LENGTH(REPLACE(ETHV26, '.', '')) >= 1 AND LENGTH(ETHV26) - LENGTH(REPLACE(ETHV26, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHV26, ',',''),'.',',') ELSE REPLACE(ETHV26,'.',',') END AS ETHV26,&#xD;&#xA;        CASE WHEN LENGTH(ETHX26) - LENGTH(REPLACE(ETHX26, '.', '')) >= 1 AND LENGTH(ETHX26) - LENGTH(REPLACE(ETHX26, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHX26, ',',''),'.',',') ELSE REPLACE(ETHX26,'.',',') END AS ETHX26,&#xD;&#xA;        CASE WHEN LENGTH(ETHZ26) - LENGTH(REPLACE(ETHZ26, '.', '')) >= 1 AND LENGTH(ETHZ26) - LENGTH(REPLACE(ETHZ26, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHZ26, ',',''),'.',',') ELSE REPLACE(ETHZ26,'.',',') END AS ETHZ26,&#xD;&#xA;        CASE WHEN LENGTH(ETHF27) - LENGTH(REPLACE(ETHF27, '.', '')) >= 1 AND LENGTH(ETHF27) - LENGTH(REPLACE(ETHF27, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHF27, ',',''),'.',',') ELSE REPLACE(ETHF27,'.',',') END AS ETHF27,&#xD;&#xA;        CASE WHEN LENGTH(ETHG27) - LENGTH(REPLACE(ETHG27, '.', '')) >= 1 AND LENGTH(ETHG27) - LENGTH(REPLACE(ETHG27, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHG27, ',',''),'.',',') ELSE REPLACE(ETHG27,'.',',') END AS ETHG27,&#xD;&#xA;        CASE WHEN LENGTH(ETHH27) - LENGTH(REPLACE(ETHH27, '.', '')) >= 1 AND LENGTH(ETHH27) - LENGTH(REPLACE(ETHH27, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHH27, ',',''),'.',',') ELSE REPLACE(ETHH27,'.',',') END AS ETHH27,&#xD;&#xA;        CASE WHEN LENGTH(ETHJ27) - LENGTH(REPLACE(ETHJ27, '.', '')) >= 1 AND LENGTH(ETHJ27) - LENGTH(REPLACE(ETHJ27, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHJ27, ',',''),'.',',') ELSE REPLACE(ETHJ27,'.',',') END AS ETHJ27,&#xD;&#xA;        CASE WHEN LENGTH(ETHK27) - LENGTH(REPLACE(ETHK27, '.', '')) >= 1 AND LENGTH(ETHK27) - LENGTH(REPLACE(ETHK27, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHK27, ',',''),'.',',') ELSE REPLACE(ETHK27,'.',',') END AS ETHK27,&#xD;&#xA;        CASE WHEN LENGTH(ETHM27) - LENGTH(REPLACE(ETHM27, '.', '')) >= 1 AND LENGTH(ETHM27) - LENGTH(REPLACE(ETHM27, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHM27, ',',''),'.',',') ELSE REPLACE(ETHM27,'.',',') END AS ETHM27,&#xD;&#xA;        CASE WHEN LENGTH(ETHN27) - LENGTH(REPLACE(ETHN27, '.', '')) >= 1 AND LENGTH(ETHN27) - LENGTH(REPLACE(ETHN27, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHN27, ',',''),'.',',') ELSE REPLACE(ETHN27,'.',',') END AS ETHN27,&#xD;&#xA;        CASE WHEN LENGTH(ETHQ27) - LENGTH(REPLACE(ETHQ27, '.', '')) >= 1 AND LENGTH(ETHQ27) - LENGTH(REPLACE(ETHQ27, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHQ27, ',',''),'.',',') ELSE REPLACE(ETHQ27,'.',',') END AS ETHQ27,&#xD;&#xA;        CASE WHEN LENGTH(ETHU27) - LENGTH(REPLACE(ETHU27, '.', '')) >= 1 AND LENGTH(ETHU27) - LENGTH(REPLACE(ETHU27, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHU27, ',',''),'.',',') ELSE REPLACE(ETHU27,'.',',') END AS ETHU27,&#xD;&#xA;        CASE WHEN LENGTH(ETHV27) - LENGTH(REPLACE(ETHV27, '.', '')) >= 1 AND LENGTH(ETHV27) - LENGTH(REPLACE(ETHV27, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHV27, ',',''),'.',',') ELSE REPLACE(ETHV27,'.',',') END AS ETHV27,&#xD;&#xA;        CASE WHEN LENGTH(ETHX27) - LENGTH(REPLACE(ETHX27, '.', '')) >= 1 AND LENGTH(ETHX27) - LENGTH(REPLACE(ETHX27, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHX27, ',',''),'.',',') ELSE REPLACE(ETHX27,'.',',') END AS ETHX27,&#xD;&#xA;        CASE WHEN LENGTH(ETHZ27) - LENGTH(REPLACE(ETHZ27, '.', '')) >= 1 AND LENGTH(ETHZ27) - LENGTH(REPLACE(ETHZ27, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHZ27, ',',''),'.',',') ELSE REPLACE(ETHZ27,'.',',') END AS ETHZ27,&#xD;&#xA;        CASE WHEN LENGTH(ETHF28) - LENGTH(REPLACE(ETHF28, '.', '')) >= 1 AND LENGTH(ETHF28) - LENGTH(REPLACE(ETHF28, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHF28, ',',''),'.',',') ELSE REPLACE(ETHF28,'.',',') END AS ETHF28,&#xD;&#xA;        CASE WHEN LENGTH(ETHG28) - LENGTH(REPLACE(ETHG28, '.', '')) >= 1 AND LENGTH(ETHG28) - LENGTH(REPLACE(ETHG28, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHG28, ',',''),'.',',') ELSE REPLACE(ETHG28,'.',',') END AS ETHG28,&#xD;&#xA;        CASE WHEN LENGTH(ETHH28) - LENGTH(REPLACE(ETHH28, '.', '')) >= 1 AND LENGTH(ETHH28) - LENGTH(REPLACE(ETHH28, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHH28, ',',''),'.',',') ELSE REPLACE(ETHH28,'.',',') END AS ETHH28,&#xD;&#xA;        CASE WHEN LENGTH(ETHJ28) - LENGTH(REPLACE(ETHJ28, '.', '')) >= 1 AND LENGTH(ETHJ28) - LENGTH(REPLACE(ETHJ28, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHJ28, ',',''),'.',',') ELSE REPLACE(ETHJ28,'.',',') END AS ETHJ28,&#xD;&#xA;        CASE WHEN LENGTH(ETHK28) - LENGTH(REPLACE(ETHK28, '.', '')) >= 1 AND LENGTH(ETHK28) - LENGTH(REPLACE(ETHK28, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHK28, ',',''),'.',',') ELSE REPLACE(ETHK28,'.',',') END AS ETHK28,&#xD;&#xA;        CASE WHEN LENGTH(ETHM28) - LENGTH(REPLACE(ETHM28, '.', '')) >= 1 AND LENGTH(ETHM28) - LENGTH(REPLACE(ETHM28, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHM28, ',',''),'.',',') ELSE REPLACE(ETHM28,'.',',') END AS ETHM28,&#xD;&#xA;        CASE WHEN LENGTH(ETHN28) - LENGTH(REPLACE(ETHN28, '.', '')) >= 1 AND LENGTH(ETHN28) - LENGTH(REPLACE(ETHN28, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHN28, ',',''),'.',',') ELSE REPLACE(ETHN28,'.',',') END AS ETHN28,&#xD;&#xA;        CASE WHEN LENGTH(ETHQ28) - LENGTH(REPLACE(ETHQ28, '.', '')) >= 1 AND LENGTH(ETHQ28) - LENGTH(REPLACE(ETHQ28, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHQ28, ',',''),'.',',') ELSE REPLACE(ETHQ28,'.',',') END AS ETHQ28,&#xD;&#xA;        CASE WHEN LENGTH(ETHU28) - LENGTH(REPLACE(ETHU28, '.', '')) >= 1 AND LENGTH(ETHU28) - LENGTH(REPLACE(ETHU28, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHU28, ',',''),'.',',') ELSE REPLACE(ETHU28,'.',',') END AS ETHU28,&#xD;&#xA;        CASE WHEN LENGTH(ETHV28) - LENGTH(REPLACE(ETHV28, '.', '')) >= 1 AND LENGTH(ETHV28) - LENGTH(REPLACE(ETHV28, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHV28, ',',''),'.',',') ELSE REPLACE(ETHV28,'.',',') END AS ETHV28,&#xD;&#xA;        CASE WHEN LENGTH(ETHX28) - LENGTH(REPLACE(ETHX28, '.', '')) >= 1 AND LENGTH(ETHX28) - LENGTH(REPLACE(ETHX28, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHX28, ',',''),'.',',') ELSE REPLACE(ETHX28,'.',',') END AS ETHX28,&#xD;&#xA;        CASE WHEN LENGTH(ETHZ28) - LENGTH(REPLACE(ETHZ28, '.', '')) >= 1 AND LENGTH(ETHZ28) - LENGTH(REPLACE(ETHZ28, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHZ28, ',',''),'.',',') ELSE REPLACE(ETHZ28,'.',',') END AS ETHZ28,&#xD;&#xA;        CASE WHEN LENGTH(ETHF29) - LENGTH(REPLACE(ETHF29, '.', '')) >= 1 AND LENGTH(ETHF29) - LENGTH(REPLACE(ETHF29, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHF29, ',',''),'.',',') ELSE REPLACE(ETHF29,'.',',') END AS ETHF29,&#xD;&#xA;        CASE WHEN LENGTH(ETHG29) - LENGTH(REPLACE(ETHG29, '.', '')) >= 1 AND LENGTH(ETHG29) - LENGTH(REPLACE(ETHG29, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHG29, ',',''),'.',',') ELSE REPLACE(ETHG29,'.',',') END AS ETHG29,&#xD;&#xA;        CASE WHEN LENGTH(ETHH29) - LENGTH(REPLACE(ETHH29, '.', '')) >= 1 AND LENGTH(ETHH29) - LENGTH(REPLACE(ETHH29, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHH29, ',',''),'.',',') ELSE REPLACE(ETHH29,'.',',') END AS ETHH29,&#xD;&#xA;        CASE WHEN LENGTH(ETHJ29) - LENGTH(REPLACE(ETHJ29, '.', '')) >= 1 AND LENGTH(ETHJ29) - LENGTH(REPLACE(ETHJ29, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHJ29, ',',''),'.',',') ELSE REPLACE(ETHJ29,'.',',') END AS ETHJ29,&#xD;&#xA;        CASE WHEN LENGTH(ETHK29) - LENGTH(REPLACE(ETHK29, '.', '')) >= 1 AND LENGTH(ETHK29) - LENGTH(REPLACE(ETHK29, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHK29, ',',''),'.',',') ELSE REPLACE(ETHK29,'.',',') END AS ETHK29,&#xD;&#xA;        CASE WHEN LENGTH(ETHM29) - LENGTH(REPLACE(ETHM29, '.', '')) >= 1 AND LENGTH(ETHM29) - LENGTH(REPLACE(ETHM29, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHM29, ',',''),'.',',') ELSE REPLACE(ETHM29,'.',',') END AS ETHM29,&#xD;&#xA;        CASE WHEN LENGTH(ETHN29) - LENGTH(REPLACE(ETHN29, '.', '')) >= 1 AND LENGTH(ETHN29) - LENGTH(REPLACE(ETHN29, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHN29, ',',''),'.',',') ELSE REPLACE(ETHN29,'.',',') END AS ETHN29,&#xD;&#xA;        CASE WHEN LENGTH(ETHQ29) - LENGTH(REPLACE(ETHQ29, '.', '')) >= 1 AND LENGTH(ETHQ29) - LENGTH(REPLACE(ETHQ29, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHQ29, ',',''),'.',',') ELSE REPLACE(ETHQ29,'.',',') END AS ETHQ29,&#xD;&#xA;        CASE WHEN LENGTH(ETHU29) - LENGTH(REPLACE(ETHU29, '.', '')) >= 1 AND LENGTH(ETHU29) - LENGTH(REPLACE(ETHU29, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHU29, ',',''),'.',',') ELSE REPLACE(ETHU29,'.',',') END AS ETHU29,&#xD;&#xA;        CASE WHEN LENGTH(ETHV29) - LENGTH(REPLACE(ETHV29, '.', '')) >= 1 AND LENGTH(ETHV29) - LENGTH(REPLACE(ETHV29, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHV29, ',',''),'.',',') ELSE REPLACE(ETHV29,'.',',') END AS ETHV29,&#xD;&#xA;        CASE WHEN LENGTH(ETHX29) - LENGTH(REPLACE(ETHX29, '.', '')) >= 1 AND LENGTH(ETHX29) - LENGTH(REPLACE(ETHX29, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHX29, ',',''),'.',',') ELSE REPLACE(ETHX29,'.',',') END AS ETHX29,&#xD;&#xA;        CASE WHEN LENGTH(ETHZ29) - LENGTH(REPLACE(ETHZ29, '.', '')) >= 1 AND LENGTH(ETHZ29) - LENGTH(REPLACE(ETHZ29, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHZ29, ',',''),'.',',') ELSE REPLACE(ETHZ29,'.',',') END AS ETHZ29,&#xD;&#xA;        CASE WHEN LENGTH(ETHF30) - LENGTH(REPLACE(ETHF30, '.', '')) >= 1 AND LENGTH(ETHF30) - LENGTH(REPLACE(ETHF30, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHF30, ',',''),'.',',') ELSE REPLACE(ETHF30,'.',',') END AS ETHF30,&#xD;&#xA;        CASE WHEN LENGTH(ETHG30) - LENGTH(REPLACE(ETHG30, '.', '')) >= 1 AND LENGTH(ETHG30) - LENGTH(REPLACE(ETHG30, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHG30, ',',''),'.',',') ELSE REPLACE(ETHG30,'.',',') END AS ETHG30,&#xD;&#xA;        CASE WHEN LENGTH(ETHH30) - LENGTH(REPLACE(ETHH30, '.', '')) >= 1 AND LENGTH(ETHH30) - LENGTH(REPLACE(ETHH30, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHH30, ',',''),'.',',') ELSE REPLACE(ETHH30,'.',',') END AS ETHH30,&#xD;&#xA;        CASE WHEN LENGTH(ETHJ30) - LENGTH(REPLACE(ETHJ30, '.', '')) >= 1 AND LENGTH(ETHJ30) - LENGTH(REPLACE(ETHJ30, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHJ30, ',',''),'.',',') ELSE REPLACE(ETHJ30,'.',',') END AS ETHJ30,&#xD;&#xA;        CASE WHEN LENGTH(ETHK30) - LENGTH(REPLACE(ETHK30, '.', '')) >= 1 AND LENGTH(ETHK30) - LENGTH(REPLACE(ETHK30, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHK30, ',',''),'.',',') ELSE REPLACE(ETHK30,'.',',') END AS ETHK30,&#xD;&#xA;        CASE WHEN LENGTH(ETHM30) - LENGTH(REPLACE(ETHM30, '.', '')) >= 1 AND LENGTH(ETHM30) - LENGTH(REPLACE(ETHM30, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHM30, ',',''),'.',',') ELSE REPLACE(ETHM30,'.',',') END AS ETHM30,&#xD;&#xA;        CASE WHEN LENGTH(ETHN30) - LENGTH(REPLACE(ETHN30, '.', '')) >= 1 AND LENGTH(ETHN30) - LENGTH(REPLACE(ETHN30, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHN30, ',',''),'.',',') ELSE REPLACE(ETHN30,'.',',') END AS ETHN30,&#xD;&#xA;        CASE WHEN LENGTH(ETHQ30) - LENGTH(REPLACE(ETHQ30, '.', '')) >= 1 AND LENGTH(ETHQ30) - LENGTH(REPLACE(ETHQ30, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHQ30, ',',''),'.',',') ELSE REPLACE(ETHQ30,'.',',') END AS ETHQ30,&#xD;&#xA;        CASE WHEN LENGTH(ETHU30) - LENGTH(REPLACE(ETHU30, '.', '')) >= 1 AND LENGTH(ETHU30) - LENGTH(REPLACE(ETHU30, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHU30, ',',''),'.',',') ELSE REPLACE(ETHU30,'.',',') END AS ETHU30,&#xD;&#xA;        CASE WHEN LENGTH(ETHV30) - LENGTH(REPLACE(ETHV30, '.', '')) >= 1 AND LENGTH(ETHV30) - LENGTH(REPLACE(ETHV30, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHV30, ',',''),'.',',') ELSE REPLACE(ETHV30,'.',',') END AS ETHV30,&#xD;&#xA;        CASE WHEN LENGTH(ETHX30) - LENGTH(REPLACE(ETHX30, '.', '')) >= 1 AND LENGTH(ETHX30) - LENGTH(REPLACE(ETHX30, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHX30, ',',''),'.',',') ELSE REPLACE(ETHX30,'.',',') END AS ETHX30,&#xD;&#xA;        CASE WHEN LENGTH(ETHZ30) - LENGTH(REPLACE(ETHZ30, '.', '')) >= 1 AND LENGTH(ETHZ30) - LENGTH(REPLACE(ETHZ30, ',', '')) >= 1 THEN REPLACE(REPLACE(ETHZ30, ',',''),'.',',') ELSE REPLACE(ETHZ30,'.',',') END AS ETHZ30&#xD;&#xA;FROM DW_STAGE.STG_ARQ_RISCOS_ETHANOL E&#xD;&#xA;ORDER BY 1&#xD;&#xA;&#xD;&#xA;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="oracle_id" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
+    <elementParameter field="CHECK" name="IS_CONVERT_XMLTYPE" value="false"/>
+    <elementParameter field="TABLE" name="CONVERT_XMLTYPE" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_CURSOR" value="false"/>
+    <elementParameter field="TEXT" name="CURSOR_SIZE" value="1000" show="false"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="DT_REFERENCIA"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHJ19"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHK19"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHM19"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHN19"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHQ19"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHU19"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHV19"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHX19"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHZ19"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHF20"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHG20"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHH20"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHJ20"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHK20"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHM20"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHN20"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHQ20"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHU20"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHV20"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHX20"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHZ20"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHF21"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHG21"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHH21"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHJ21"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHK21"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHM21"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHN21"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHQ21"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHU21"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHV21"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHX21"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHZ21"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHF22"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHG22"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHH22"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHJ22"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHK22"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHM22"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHN22"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHQ22"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHU22"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHV22"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHX22"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHZ22"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHF23"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHG23"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHH23"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHJ23"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHK3"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHM23"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHN23"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHQ23"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHU23"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHV23"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHX23"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHZ23"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHF24"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHG24"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHH24"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHJ24"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHK24"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHM24"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHN24"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHQ24"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHU24"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHV24"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHX24"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHZ24"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHF25"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHG25"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHH25"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHJ25"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHK25"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHM25"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHN25"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHQ25"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHU25"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHV25"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHX25"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHZ25"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHF26"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHG26"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHH26"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHJ26"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHK26"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHM26"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHN26"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHQ26"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHU26"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHV26"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHX26"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHZ26"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHF27"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHG27"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHH27"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHJ27"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHK27"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHM27"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHN27"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHQ27"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHU27"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHV27"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHX27"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHZ27"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHF28"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHG28"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHH28"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHJ28"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHK28"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHM28"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHN28"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHQ28"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHU28"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHV28"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHX28"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHZ28"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHF29"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHG29"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHH29"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHJ29"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHK29"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHM29"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHN29"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHQ29"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHU29"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHV29"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHX29"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHZ29"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHF30"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHG30"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHH30"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHJ30"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHK30"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHM30"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHN30"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHQ30"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHU30"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHV30"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHX30"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ETHZ30"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="NO_NULL_VALUES" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBInput_1">
+      <column comment="" key="false" length="10" name="DT_REFERENCIA" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ETHJ19" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ETHK19" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ETHM19" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ETHN19" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ETHQ19" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ETHU19" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ETHV19" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ETHX19" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ETHZ19" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ETHF20" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHG20" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHH20" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHJ20" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHK20" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHM20" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHN20" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHQ20" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHU20" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHV20" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHX20" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHZ20" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHF21" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHG21" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHH21" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHJ21" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHK21" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHM21" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHN21" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHQ21" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHU21" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHV21" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHX21" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHZ21" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHF22" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHG22" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHH22" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHJ22" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHK22" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHM22" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHN22" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHQ22" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHU22" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHV22" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHX22" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHZ22" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHF23" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHG23" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHH23" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHJ23" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHK3" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHM23" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHN23" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHQ23" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHU23" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHV23" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHX23" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHZ23" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHF24" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHG24" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHH24" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHJ24" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHK24" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHM24" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHN24" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHQ24" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHU24" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHV24" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHX24" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHZ24" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHF25" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHG25" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHH25" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHJ25" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHK25" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHM25" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHN25" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHQ25" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHU25" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHV25" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHX25" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHZ25" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHF26" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHG26" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHH26" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHJ26" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHK26" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHM26" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHN26" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHQ26" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHU26" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHV26" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHX26" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHZ26" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHF27" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHG27" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHH27" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHJ27" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHK27" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHM27" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHN27" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHQ27" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHU27" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHV27" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHX27" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHZ27" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHF28" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHG28" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHH28" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHJ28" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHK28" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHM28" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHN28" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHQ28" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHU28" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHV28" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHX28" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHZ28" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHF29" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHG29" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHH29" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHJ29" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHK29" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHM29" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHN29" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHQ29" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHU29" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHV29" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHX29" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHZ29" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHF30" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHG30" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHH30" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHJ30" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHK30" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHM30" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHN30" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHQ30" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHU30" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHV30" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHX30" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHZ30" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFilterColumns" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFilterColumns_1" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFilterColumns_1">
+      <column comment="" key="false" length="10" name="DT_REFERENCIA" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ETHJ19" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ETHK19" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ETHM19" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ETHN19" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ETHQ19" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ETHU19" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ETHV19" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ETHX19" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ETHZ19" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ETHF20" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ETHG20" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHH20" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHJ20" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHK20" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHM20" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHN20" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHQ20" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHU20" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHV20" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHX20" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHZ20" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHF21" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHG21" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHH21" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHJ21" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHK21" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHM21" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHN21" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHQ21" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHU21" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHV21" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHX21" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHZ21" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHF22" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHG22" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHH22" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHJ22" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHK22" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHM22" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHN22" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHQ22" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHU22" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHV22" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHX22" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHZ22" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHF23" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHG23" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHH23" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHJ23" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHK3" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHM23" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHN23" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHQ23" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHU23" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHV23" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHX23" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHZ23" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHF24" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHG24" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHH24" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHJ24" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHK24" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHM24" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHN24" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHQ24" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHU24" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHV24" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHX24" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHZ24" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHF25" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHG25" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHH25" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHJ25" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHK25" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHM25" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHN25" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHQ25" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHU25" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHV25" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHX25" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHZ25" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHF26" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHG26" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHH26" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHJ26" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHK26" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHM26" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHN26" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHQ26" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHU26" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHV26" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHX26" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHZ26" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHF27" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHG27" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHH27" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHJ27" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHK27" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHM27" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHN27" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHQ27" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHU27" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHV27" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHX27" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHZ27" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHF28" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHG28" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHH28" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHJ28" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHK28" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHM28" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHN28" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHQ28" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHU28" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHV28" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHX28" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHZ28" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHF29" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHG29" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHH29" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHJ29" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHK29" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHM29" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHN29" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHQ29" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHU29" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHV29" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHX29" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHZ29" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHF30" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHG30" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHH30" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHJ30" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHK30" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHM30" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHN30" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHQ30" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHU30" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHV30" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHX30" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="ETHZ30" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tUnpivotRow" componentVersion="1.1" offsetLabelX="0" offsetLabelY="0" posX="544" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tUnpivotRow_1" show="false"/>
+    <elementParameter field="LABEL" name="WARNING" value="Columns outside the row keys will be unpivoted"/>
+    <elementParameter field="TABLE" name="ROW_KEYS">
+      <elementValue elementRef="COLUMN" value="DT_REFERENCIA"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="INCLUDE_EMPTY_VALUES" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tUnpivotRow_1">
+      <column comment="" key="false" length="255" name="DT_REFERENCIA" nullable="true" pattern="yyyy-MM-dd" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column key="false" length="0" name="pivot_key" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="0" name="pivot_value" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="704" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_l5CakPzEEe6OMcUyJmT8XQ-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" value="0" show="false"/>
+    <elementParameter field="TEXT" name="JACCARD" value="0" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="row3">
+      <column comment="" key="false" length="-1" name="DT_REFERENCIA" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="VARCHAR2" type="id_Date" originalLength="255" usefulColumn="true"/>
+      <column key="false" length="255" name="CD_TELA" nullable="true" precision="0" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column key="false" length="255" name="VALOR" nullable="true" precision="0" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DATAHORAPROCESSAMENTO" nullable="true" pattern="" precision="0" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="row3">
+        <mapperTableEntries name="DT_REFERENCIA" expression="TypeConvert.String2Date(row4.DT_REFERENCIA ,&quot;yyyy-MM-dd&quot;)" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="CD_TELA" expression="row4.pivot_key " type="id_String" nullable="true"/>
+        <mapperTableEntries name="VALOR" expression="row4.pivot_value" type="id_String" nullable="true"/>
+        <mapperTableEntries name="DATAHORAPROCESSAMENTO" expression="context.DATAHORAPROCESSAMENTO " type="id_String" nullable="true"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row4" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="DT_REFERENCIA" type="id_String" nullable="true"/>
+        <mapperTableEntries name="pivot_key" type="id_String" nullable="true"/>
+        <mapperTableEntries name="pivot_value" type="id_String" nullable="true"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="-8" offsetLabelY="0" posX="864" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFilterRow_1" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+    <elementParameter field="TABLE" name="CONDITIONS">
+      <elementValue elementRef="INPUT_COLUMN" value="VALOR"/>
+      <elementValue elementRef="FUNCTION" value=""/>
+      <elementValue elementRef="OPERATOR" value="!="/>
+      <elementValue elementRef="RVALUE" value="&quot;0&quot;"/>
+      <elementValue elementRef="INPUT_COLUMN" value="VALOR"/>
+      <elementValue elementRef="FUNCTION" value=""/>
+      <elementValue elementRef="OPERATOR" value="!="/>
+      <elementValue elementRef="RVALUE" value="&quot;- 0&quot;"/>
+      <elementValue elementRef="INPUT_COLUMN" value="VALOR"/>
+      <elementValue elementRef="FUNCTION" value=""/>
+      <elementValue elementRef="OPERATOR" value="!="/>
+      <elementValue elementRef="RVALUE" value="&quot;#NAME?&quot;"/>
+      <elementValue elementRef="INPUT_COLUMN" value="VALOR"/>
+      <elementValue elementRef="FUNCTION" value=""/>
+      <elementValue elementRef="OPERATOR" value="!="/>
+      <elementValue elementRef="RVALUE" value="&quot;ERROR:#NAME?&quot;"/>
+      <elementValue elementRef="INPUT_COLUMN" value="VALOR"/>
+      <elementValue elementRef="FUNCTION" value=""/>
+      <elementValue elementRef="OPERATOR" value="!="/>
+      <elementValue elementRef="RVALUE" value="&quot;#N/A Invalid Security&quot;"/>
+      <elementValue elementRef="INPUT_COLUMN" value="VALOR"/>
+      <elementValue elementRef="FUNCTION" value=""/>
+      <elementValue elementRef="OPERATOR" value="!="/>
+      <elementValue elementRef="RVALUE" value="&quot;#N/A Requesting Data,,,&quot;"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="USE_ADVANCED" value="true"/>
+    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;//input_row.columnName1.equals(input_row.columnName2)&#xA;&#xA;!input_row.VALOR.equals(&quot;0&quot;)  &#xA;&amp;&amp; !input_row.VALOR.equals(&quot;- 0&quot;)  &#xA;&amp;&amp; !input_row.VALOR.contains(&quot;NAME&quot;)  &#xA;&amp;&amp; !input_row.VALOR.contains(&quot;ERROR&quot;)  &#xA;&amp;&amp; !input_row.VALOR.contains(&quot;N/A&quot;)&#xA;&#xA;&#x9;&#x9;&#x9;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFilterRow_1">
+      <column comment="" key="false" length="-1" name="DT_REFERENCIA" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="VARCHAR2" type="id_Date" originalLength="255" usefulColumn="true"/>
+      <column key="false" length="255" name="CD_TELA" nullable="true" precision="0" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column key="false" length="255" name="VALOR" nullable="true" precision="0" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DATAHORAPROCESSAMENTO" nullable="true" pattern="" precision="0" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="FILTER" name="FILTER">
+      <column comment="" key="false" length="-1" name="DT_REFERENCIA" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="VARCHAR2" type="id_Date" originalLength="255" usefulColumn="true"/>
+      <column key="false" length="255" name="CD_TELA" nullable="true" precision="0" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column key="false" length="255" name="VALOR" nullable="true" precision="0" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DATAHORAPROCESSAMENTO" nullable="true" pattern="" precision="0" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="-1" name="DT_REFERENCIA" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="VARCHAR2" type="id_Date" originalLength="255" usefulColumn="true"/>
+      <column key="false" length="255" name="CD_TELA" nullable="true" precision="0" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column key="false" length="255" name="VALOR" nullable="true" precision="0" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DATAHORAPROCESSAMENTO" nullable="true" pattern="" precision="0" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="992" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_2" show="false"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_l5CakPzEEe6OMcUyJmT8XQ-tMap_2-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" value="0" show="false"/>
+    <elementParameter field="TEXT" name="JACCARD" value="0" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="out1">
+      <column comment="" key="false" length="-1" name="DT_REFERENCIA" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="VARCHAR2" type="id_Date" originalLength="255" usefulColumn="true"/>
+      <column key="false" length="255" name="CD_TELA" nullable="true" precision="0" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column key="false" length="18" name="VALOR" nullable="true" precision="4" sourceType="" type="id_BigDecimal" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DATAHORAPROCESSAMENTO" nullable="true" pattern="" precision="0" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables sizeState="INTERMEDIATE" name="Var">
+        <mapperTableEntries name="dot" expression="StringHandling.CHANGE(StringHandling.CHANGE(row5.VALOR, &quot;[.]&quot;, &quot;&quot;) , &quot;[,]&quot;, &quot;.&quot;) " type="id_String"/>
+      </varTables>
+      <outputTables sizeState="INTERMEDIATE" name="out1">
+        <mapperTableEntries name="DT_REFERENCIA" expression="row5.DT_REFERENCIA " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="CD_TELA" expression="row5.CD_TELA " type="id_String" nullable="true"/>
+        <mapperTableEntries name="VALOR" expression="TypeConvert.String2BigDecimal(Var.dot)" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="DATAHORAPROCESSAMENTO" expression="row5.DATAHORAPROCESSAMENTO " type="id_String" nullable="true"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row5" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="DT_REFERENCIA" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="CD_TELA" type="id_String" nullable="true"/>
+        <mapperTableEntries name="VALOR" type="id_String" nullable="true"/>
+        <mapperTableEntries name="DATAHORAPROCESSAMENTO" type="id_String" nullable="true"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tOracleOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBOutput_2" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SID" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_18" show="false"/>
+    <elementParameter field="TEXT" name="RAC_URL" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="context.STG_HOST" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="context.STG_PORT" show="false"/>
+    <elementParameter field="TEXT" name="TYPE" value="Oracle" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.STG_DBNAME" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TABLESCHEMA" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="context.STG_USER" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:K9ySYc8TSkm9ND+pk201W27eeViKEIkjB46MV0anwhzsNFFSMzwvouyRnQ==" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="jobName"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
+    <elementParameter field="LABEL" name="NOTE" value="Warning : this component configuration will automatically generate a commit before data insert/update/delete" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="oracle_id" show="false"/>
+    <elementParameter field="TEXT" name="JDBC_URL" value="&quot;jdbc:oracle:oci:/@talend&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;" show="false"/>
+    <elementParameter field="CHECK" name="USE_ALTERNATE_SCHEMA" value="false"/>
+    <elementParameter field="TEXT" name="ALTERNATE_SCHEMA" value="&quot;&quot;" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000" show="false"/>
+    <elementParameter field="TABLE" name="ADD_COLS">
+      <elementValue elementRef="NAME" value="&quot;DATAHORAINCLUSAO&quot;"/>
+      <elementValue elementRef="DATATYPE" value="DATE"/>
+      <elementValue elementRef="SQL" value="&quot;SYSDATE&quot;"/>
+      <elementValue elementRef="POS" value="AFTER"/>
+      <elementValue elementRef="REFCOL" value="DATAHORAPROCESSAMENTO"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="DT_REFERENCIA"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CD_TELA"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VALOR"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DATAHORAPROCESSAMENTO"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="HINT_OPTIONS" show="false"/>
+    <elementParameter field="CHECK" name="CONVERT_COLUMN_TABLE_TO_UPPERCASE" value="false"/>
+    <elementParameter field="CHECK" name="CONTAIN_BLOB_FROM_OTHER_DB" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
+    <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true" show="false"/>
+    <elementParameter field="CHECK" name="USE_BATCH_AND_USE_CONN" value="false"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000" show="false"/>
+    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
+    <elementParameter field="CHECK" name="USE_TIMESTAMP_FOR_DATE_TYPE" value="true"/>
+    <elementParameter field="CHECK" name="TRIM_CHAR" value="true"/>
+    <elementParameter field="TEXT" name="LABEL" value="STG"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBOutput_2">
+      <column comment="" key="false" length="-1" name="DT_REFERENCIA" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" originalLength="255" usefulColumn="true"/>
+      <column key="false" length="255" name="CD_TELA" nullable="true" precision="0" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column key="false" length="18" name="VALOR" nullable="true" precision="4" sourceType="" type="id_BigDecimal" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DATAHORAPROCESSAMENTO" nullable="true" pattern="" precision="0" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="-1" name="DT_REFERENCIA" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="DATE" type="id_Date" originalLength="255" usefulColumn="true"/>
+      <column key="false" length="255" name="CD_TELA" nullable="true" precision="0" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column key="false" length="18" name="VALOR" nullable="true" precision="4" sourceType="" type="id_BigDecimal" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DATAHORAPROCESSAMENTO" nullable="true" pattern="" precision="0" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tOracleConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBConnection_1" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SID"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_18"/>
+    <elementParameter field="TEXT" name="RAC_URL" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="USE_TNS_FILE" value="false"/>
+    <elementParameter field="FILE" name="TNS_FILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TNS_EDITOR" name="TNS_EDITOR" value="" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="context.DW_HOST"/>
+    <elementParameter field="TEXT" name="TYPE" value="Oracle" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="context.DW_PORT"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.DW_DBNAME"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="context.DW_USER"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:ZyEE3E8/wg6PnTF2Vzw40x0moE8YxrW9EhIAh8ljb/uZaQAdxkIjwy6C"/>
+    <elementParameter field="CHECK" name="USE_SSL" value="false" show="false"/>
+    <elementParameter field="FILE" name="SSL_TRUSTSERVER_TRUSTSTORE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" value="enc:system.encryption.key.v1:KF0HE/B/9h3TGLF66AwHCxNtJg2NE4XNDcK2F6sc" show="false"/>
+    <elementParameter field="CHECK" name="NEED_CLIENT_AUTH" value="false" show="false"/>
+    <elementParameter field="FILE" name="SSL_KEYSTORE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="SSL_KEYSTORE_PASSWORD" value="enc:system.encryption.key.v1:qBcHgIPLUR5be1Cog6NnO5OtuDKO6KSrNNI+6O+B" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_CBC_PROTECTION" value="true" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
+    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="true"/>
+    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" value="&quot;DW&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="JDBC_URL" value="&quot;jdbc:oracle:thin:USER/MDP@server&quot;" show="false"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="DW"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tOracleRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_1" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SID" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_18" show="false"/>
+    <elementParameter field="TEXT" name="RAC_URL" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1521&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TYPE" value="Oracle" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:BjB2tOGIqPeqf6hItJld+4Zq+iXwocLPD2FeL7aL" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;DELETE &quot; + jobName "/>
+    <elementParameter field="CLOSED_LIST" name="USE_NB_LINE" value="NONE"/>
+    <elementParameter field="LABEL" name="USE_NB_LINE_NOTE" value="* Only used if the query is an insert, an update or a delete."/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;" show="false"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value="SK_FT_PLANTIO" show="false"/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="DELETE"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBRow_1">
+      <column comment="" key="false" length="5" name="SK_FT_PLANTIO" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_Long" originalLength="5" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="5" name="SK_FT_PLANTIO" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_Long" originalLength="5" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tJava_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_1" offsetLabelX="0" offsetLabelY="0" source="tPostjob_1" target="tJava_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tFilterColumns_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="CATEGORIA_DSS"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tFilterColumns_1" offsetLabelX="0" offsetLabelY="0" source="tFilterColumns_1" target="tUnpivotRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tUnpivotRow_1" offsetLabelX="0" offsetLabelY="0" source="tUnpivotRow_1" target="tMap_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="row3" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tFilterRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3" show="false"/>
+  </connection>
+  <connection connectorName="FILTER" label="row5" lineStyle="0" metaname="FILTER" offsetLabelX="0" offsetLabelY="0" source="tFilterRow_1" target="tMap_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row5" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tDBOutput_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="out1" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBConnection_1" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_1" target="tDBRow_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk4" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBRow_1" offsetLabelX="0" offsetLabelY="0" source="tDBRow_1" target="tDBInput_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk5" show="false"/>
+  </connection>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_2" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBConnection_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+</talendfile:ProcessType>
