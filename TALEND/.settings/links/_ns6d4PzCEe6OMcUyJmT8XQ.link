@@ -1,0 +1,62 @@
+{
+  "itemId" : "_ns6d4PzCEe6OMcUyJmT8XQ",
+  "contextList" : [ {
+    "contextName" : "PRODUCAO",
+    "repoId" : "_6iuj4AkiEe2Ax_MwDXx3bg",
+    "parameterList" : [ {
+      "id" : "_kSsk4fXfEe6gHPNzQXR5JA",
+      "name" : "CAMINHO_ARQUIVO_IMPORT_B"
+    }, {
+      "id" : "_lTAnIQw-Ee2A6879-FM6Fw",
+      "name" : "DATAHORAPROCESSAMENTO"
+    } ]
+  }, {
+    "contextName" : "PRODUCAO",
+    "repoId" : "_BP5WsAeHEe2mwrIUnyru9w",
+    "parameterList" : [ {
+      "id" : "_DsVGSAduEe2mwrIUnyru9w",
+      "name" : "STG_DBNAME"
+    }, {
+      "id" : "_DsVGRwduEe2mwrIUnyru9w",
+      "name" : "STG_HOST"
+    }, {
+      "id" : "_DsVGSwduEe2mwrIUnyru9w",
+      "name" : "STG_PORT"
+    }, {
+      "id" : "_DsVGSgduEe2mwrIUnyru9w",
+      "name" : "STG_PWD"
+    }, {
+      "id" : "_DsVGSQduEe2mwrIUnyru9w",
+      "name" : "STG_USER"
+    } ]
+  }, {
+    "contextName" : "HOMOLOGACAO",
+    "repoId" : "_6iuj4AkiEe2Ax_MwDXx3bg",
+    "parameterList" : [ {
+      "id" : "_kSsk4PXfEe6gHPNzQXR5JA",
+      "name" : "CAMINHO_ARQUIVO_IMPORT_B"
+    }, {
+      "id" : "_lTAnIAw-Ee2A6879-FM6Fw",
+      "name" : "DATAHORAPROCESSAMENTO"
+    } ]
+  }, {
+    "contextName" : "HOMOLOGACAO",
+    "repoId" : "_BP5WsAeHEe2mwrIUnyru9w",
+    "parameterList" : [ {
+      "id" : "_DsVGQgduEe2mwrIUnyru9w",
+      "name" : "STG_DBNAME"
+    }, {
+      "id" : "_DsVGQQduEe2mwrIUnyru9w",
+      "name" : "STG_HOST"
+    }, {
+      "id" : "_DsVGRQduEe2mwrIUnyru9w",
+      "name" : "STG_PORT"
+    }, {
+      "id" : "_DsVGRAduEe2mwrIUnyru9w",
+      "name" : "STG_PWD"
+    }, {
+      "id" : "_DsVGQwduEe2mwrIUnyru9w",
+      "name" : "STG_USER"
+    } ]
+  } ]
+}

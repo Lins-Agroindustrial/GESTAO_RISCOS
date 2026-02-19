@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="DW_DBNAME" prompt="DW_DBNAME?" promptNeeded="false" repositoryContextId="_DsNxgAduEe2mwrIUnyru9w" type="id_String" value="prod02" internalId="_h-YSsPDBEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="DW_HOST" prompt="DW_HOST?" promptNeeded="false" repositoryContextId="_DsNxgAduEe2mwrIUnyru9w" type="id_String" value="bdprod02.work.local" internalId="_h-YSsfDBEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="DW_PORT" prompt="DW_PORT?" promptNeeded="false" repositoryContextId="_DsNxgAduEe2mwrIUnyru9w" type="id_String" value="1521" internalId="_h-YSsvDBEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="DW_PWD" prompt="DW_PWD?" promptNeeded="false" repositoryContextId="_DsNxgAduEe2mwrIUnyru9w" type="id_Password" value="enc:system.encryption.key.v1:qNj3ApLP1sXNSnVs8RL0/brWCmc9AHU5cK+ibKjb3ejQrdoN" internalId="_h-Y5wPDBEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="DW_USER" prompt="DW_USER?" promptNeeded="false" repositoryContextId="_DsNxgAduEe2mwrIUnyru9w" type="id_String" value="dw" internalId="_h-Y5wfDBEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="DATAHORAPROCESSAMENTO" prompt="DATAHORAPROCESSAMENTO?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_h-Y5wvDBEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="STG_DBNAME" prompt="STG_DBNAME?" promptNeeded="false" repositoryContextId="_BP5WsAeHEe2mwrIUnyru9w" type="id_String" value="prod02" internalId="_h-Y5w_DBEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="STG_HOST" prompt="STG_HOST?" promptNeeded="false" repositoryContextId="_BP5WsAeHEe2mwrIUnyru9w" type="id_String" value="bdprod02.work.local" internalId="_h-Y5xPDBEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="STG_PORT" prompt="STG_PORT?" promptNeeded="false" repositoryContextId="_BP5WsAeHEe2mwrIUnyru9w" type="id_String" value="1521" internalId="_h-Y5xfDBEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="STG_PWD" prompt="STG_PWD?" promptNeeded="false" repositoryContextId="_BP5WsAeHEe2mwrIUnyru9w" type="id_Password" value="enc:system.encryption.key.v1:51Y99RzXYuGRDAuZV+aJ+9Lty5fn1tEcgj5zrQJgMGJQqMSr" internalId="_h-Y5xvDBEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="STG_USER" prompt="STG_USER?" promptNeeded="false" repositoryContextId="_BP5WsAeHEe2mwrIUnyru9w" type="id_String" value="dw_stage" internalId="_h-Y5x_DBEe2wq8oM-SeJ3w"/>
+  </context>
+  <context confirmationNeeded="false" name="PRODUCAO">
+    <contextParameter comment="" name="DW_DBNAME" prompt="DW_DBNAME?" promptNeeded="false" repositoryContextId="_DsNxgAduEe2mwrIUnyru9w" type="id_String" value="prod02" internalId="_h-Y5yPDBEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="DW_HOST" prompt="DW_HOST?" promptNeeded="false" repositoryContextId="_DsNxgAduEe2mwrIUnyru9w" type="id_String" value="bdprod02.work.local" internalId="_h-Y5yfDBEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="DW_PORT" prompt="DW_PORT?" promptNeeded="false" repositoryContextId="_DsNxgAduEe2mwrIUnyru9w" type="id_String" value="1521" internalId="_h-Y5yvDBEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="DW_PWD" prompt="DW_PWD?" promptNeeded="false" repositoryContextId="_DsNxgAduEe2mwrIUnyru9w" type="id_Password" value="enc:system.encryption.key.v1:jduKYayfwAy8s3sACsiN0jnIhpvjejoqbrIQo2DvOe8ml6at" internalId="_h-Y5y_DBEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="DW_USER" prompt="DW_USER?" promptNeeded="false" repositoryContextId="_DsNxgAduEe2mwrIUnyru9w" type="id_String" value="dw" internalId="_h-Y5zPDBEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="DATAHORAPROCESSAMENTO" prompt="DATAHORAPROCESSAMENTO?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_h-Y5zfDBEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="STG_DBNAME" prompt="STG_DBNAME?" promptNeeded="false" repositoryContextId="_BP5WsAeHEe2mwrIUnyru9w" type="id_String" value="prod02" internalId="_h-Y5zvDBEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="STG_HOST" prompt="STG_HOST?" promptNeeded="false" repositoryContextId="_BP5WsAeHEe2mwrIUnyru9w" type="id_String" value="bdprod02.work.local" internalId="_h-Y5z_DBEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="STG_PORT" prompt="STG_PORT?" promptNeeded="false" repositoryContextId="_BP5WsAeHEe2mwrIUnyru9w" type="id_String" value="1521" internalId="_h-Y50PDBEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="STG_PWD" prompt="STG_PWD?" promptNeeded="false" repositoryContextId="_BP5WsAeHEe2mwrIUnyru9w" type="id_Password" value="enc:system.encryption.key.v1:UhbEh7TgHaaCSBSGbClQjxFXNj8Hfw9CJ5sw+8mTp06b9J8B" internalId="_h-Y50fDBEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="STG_USER" prompt="STG_USER?" promptNeeded="false" repositoryContextId="_BP5WsAeHEe2mwrIUnyru9w" type="id_String" value="dw_stage" internalId="_h-Y50vDBEe2wq8oM-SeJ3w"/>
+  </context>
+  <context confirmationNeeded="false" name="HOMOLOGACAO">
+    <contextParameter comment="" name="DW_DBNAME" prompt="DW_DBNAME?" promptNeeded="false" repositoryContextId="_DsNxgAduEe2mwrIUnyru9w" type="id_String" value="prod02" internalId="_h-Y50_DBEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="DW_HOST" prompt="DW_HOST?" promptNeeded="false" repositoryContextId="_DsNxgAduEe2mwrIUnyru9w" type="id_String" value="bdprod02.work.local" internalId="_h-Y51PDBEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="DW_PORT" prompt="DW_PORT?" promptNeeded="false" repositoryContextId="_DsNxgAduEe2mwrIUnyru9w" type="id_String" value="1521" internalId="_h-Y51fDBEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="DW_PWD" prompt="DW_PWD?" promptNeeded="false" repositoryContextId="_DsNxgAduEe2mwrIUnyru9w" type="id_Password" value="enc:system.encryption.key.v1:WmMm/PHbC3j1u/fP+XD2g00ui42tT2qmYCb1xFcOb0CzvFaQ" internalId="_h-Y51vDBEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="DW_USER" prompt="DW_USER?" promptNeeded="false" repositoryContextId="_DsNxgAduEe2mwrIUnyru9w" type="id_String" value="dw" internalId="_h-Y51_DBEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="DATAHORAPROCESSAMENTO" prompt="DATAHORAPROCESSAMENTO?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_h-Y52PDBEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="STG_DBNAME" prompt="STG_DBNAME?" promptNeeded="false" repositoryContextId="_BP5WsAeHEe2mwrIUnyru9w" type="id_String" value="prod02" internalId="_h-Y52fDBEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="STG_HOST" prompt="STG_HOST?" promptNeeded="false" repositoryContextId="_BP5WsAeHEe2mwrIUnyru9w" type="id_String" value="bdprod02.work.local" internalId="_h-Y52vDBEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="STG_PORT" prompt="STG_PORT?" promptNeeded="false" repositoryContextId="_BP5WsAeHEe2mwrIUnyru9w" type="id_String" value="1521" internalId="_h-Y52_DBEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="STG_PWD" prompt="STG_PWD?" promptNeeded="false" repositoryContextId="_BP5WsAeHEe2mwrIUnyru9w" type="id_Password" value="enc:system.encryption.key.v1:jNTN/f4I0Os35xo0FSOuXapZ4lUhPWZ9W6ZZXAUUP4LY0yu/" internalId="_h-Y53PDBEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="STG_USER" prompt="STG_USER?" promptNeeded="false" repositoryContextId="_BP5WsAeHEe2mwrIUnyru9w" type="id_String" value="dw_stage" internalId="_h-Y53fDBEe2wq8oM-SeJ3w"/>
+  </context>
+  <parameters>
+    <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" value="" show="false"/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="OVERRIDE_ENCODING_FLAG" value="false" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="OVERRIDE_ENCODING_IN_EXTRA" value="ISO-8859-15" show="false"/>
+    <elementParameter field="TECHNICAL" name="OVERRIDE_ENCODING_IN_EXTRA:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:k+V8JYGAFI1haziAKENLnORNAuwr+/Ik1nHBUgUl" show="false"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false" show="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;C:/TALEND/WORKSPACE/.metadata&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="ISO-8859-15" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="false" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" value="tJDBCOutput" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_12" show="false"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:IxxYOvgNgkg+g1Np16xhf+wbXehgiZu0oPeM0pOi" show="false"/>
+    <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" value="" show="false"/>
+    <routinesParameter id="_cwoqgAdpEe2mwrIUnyru9w" name="DataOperation"/>
+    <routinesParameter id="_cxOgYAdpEe2mwrIUnyru9w" name="Mathematical"/>
+    <routinesParameter id="_cxYRYAdpEe2mwrIUnyru9w" name="Numeric"/>
+    <routinesParameter id="_cxrMUAdpEe2mwrIUnyru9w" name="Relational"/>
+    <routinesParameter id="_cx5OwAdpEe2mwrIUnyru9w" name="StringHandling"/>
+    <routinesParameter id="_cyMJsAdpEe2mwrIUnyru9w" name="TalendDataGenerator"/>
+    <routinesParameter id="_cyV6sAdpEe2mwrIUnyru9w" name="TalendDate"/>
+    <routinesParameter id="_cyympgdpEe2mwrIUnyru9w" name="TalendStringUtil"/>
+    <routinesParameter id="_cyo1oAdpEe2mwrIUnyru9w" name="TalendString"/>
+  </parameters>
+  <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="2" offsetLabelY="9" posX="64" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="224" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="java.io.File folder = new java.io.File(projectName + &quot;_LOGS/&quot;);&#xA;if (!folder.exists()) {&#xA; if (folder.mkdir()) {&#xA; System.out.println(&quot;Logs directory is created!&quot;);&#xA; } else {&#xA; System.out.println(&quot;Failed to create directory!&quot;);&#xA; }&#xA;}&#xA;java.io.File logFile = new java.io.File(projectName + &quot;_LOGS/&quot; + jobName + &quot;.log&quot;);&#xA;java.io.PrintStream ps = new java.io.PrintStream(new java.io.FileOutputStream(logFile));&#xA;System.setOut(ps);&#xA;System.setErr(ps);&#xA;&#xA;System.out.println(jobName + &quot; - v&quot; + jobVersion  + &quot; - BEGIN (&quot; + context.STG_DBNAME + &quot;/&quot; + context.STG_USER + &quot;): &quot; + TalendDate.getDate(&quot;CCYY-MM-DD hh:mm:ss&quot;));&#xA;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_1"/>
+  </node>
+  <node componentName="tPostjob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="544" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_2" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="System.out.println(jobName + &quot; - END: &quot; + TalendDate.getDate(&quot;CCYY-MM-DD hh:mm:ss&quot;));"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_2"/>
+  </node>
+  <node componentName="tOracleConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBConnection_1" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SID"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_18"/>
+    <elementParameter field="TEXT" name="RAC_URL" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="USE_TNS_FILE" value="false"/>
+    <elementParameter field="FILE" name="TNS_FILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TNS_EDITOR" name="TNS_EDITOR" value="" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="context.DW_HOST"/>
+    <elementParameter field="TEXT" name="TYPE" value="Oracle" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="context.DW_PORT"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.DW_DBNAME"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="context.DW_USER"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:yMY9trb9cKyDvOR0G7Je7hvKXtWJE+zwNf2lJCmGEbW3GAQXnV13q3q1"/>
+    <elementParameter field="CHECK" name="USE_SSL" value="false" show="false"/>
+    <elementParameter field="FILE" name="SSL_TRUSTSERVER_TRUSTSTORE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="SSL_TRUSTSERVER_PASSWORD" value="enc:system.encryption.key.v1:AQ38lkovzcANV/uYj3l/SiEhYjws9sFAxgzwD6wH" show="false"/>
+    <elementParameter field="CHECK" name="NEED_CLIENT_AUTH" value="false" show="false"/>
+    <elementParameter field="FILE" name="SSL_KEYSTORE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="SSL_KEYSTORE_PASSWORD" value="enc:system.encryption.key.v1:uxJgw+c3eLoBo5mZRO8GDEOd+9BvJMNtSwzy+KRu" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_CBC_PROTECTION" value="true" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
+    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="true"/>
+    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" value="&quot;DW_DIM&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="JDBC_URL" value="&quot;jdbc:oracle:thin:USER/MDP@server&quot;" show="false"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="DW"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_1" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SID"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_18"/>
+    <elementParameter field="TEXT" name="RAC_URL" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="context.STG_HOST"/>
+    <elementParameter field="TEXT" name="TYPE" value="Oracle" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="context.STG_PORT"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.STG_DBNAME"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="context.STG_USER"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:gmywX76oIghNU5tU8HY14E0GGiqfscYUckEZos5uOwOEoAR+z6210EvG4g=="/>
+    <elementParameter field="TEXT" name="JDBC_URL" value="&quot;jdbc:oracle:oci:/@talend&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;select &#xD;&#xA;  cod_doenca,&#xD;&#xA;  grupo,&#xD;&#xA;  nome_doenca,&#xD;&#xA;  cod_gr_doenca,&#xD;&#xA;  nome_gr_doenca,&#xD;&#xA;  cod_espec,&#xD;&#xA;  nome_espec,&#xD;&#xA;  case when&#xD;&#xA;    Upper(grupo) in ('NEUROLOGIA','ORTOPEDIA','PSIQUIATRIA') then&#xD;&#xA;          Upper('Ocupacional')&#xD;&#xA;  else&#xD;&#xA;    Upper('Não Ocupacional')&#xD;&#xA;  end as DS_CATEGORIA&#xD;&#xA;from arq_sso_agrup_cid &#xD;&#xA;&#xD;&#xA;union all&#xD;&#xA;&#xD;&#xA;select&#xD;&#xA;  '9999999999',&#xD;&#xA;  'SEM CID',&#xD;&#xA;  'SEM CID',&#xD;&#xA;  null,&#xD;&#xA;  'SEM CID',&#xD;&#xA;  null,&#xD;&#xA;  null,&#xD;&#xA;  Upper('Sem CID')&#xD;&#xA;from dual&#xD;&#xA;&#xD;&#xA;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="oracle_id" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
+    <elementParameter field="CHECK" name="IS_CONVERT_XMLTYPE" value="false"/>
+    <elementParameter field="TABLE" name="CONVERT_XMLTYPE" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_CURSOR" value="false"/>
+    <elementParameter field="TEXT" name="CURSOR_SIZE" value="1000" show="false"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="COD_DOENCA"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="GRUPO"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="NOME_DOENCA"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="COD_GR_DOENCA"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="NOME_GR_DOENCA"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="COD_ESPEC"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="NOME_ESPEC"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DS_CATEGORIA"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="NO_NULL_VALUES" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="STG"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBInput_1">
+      <column comment="" key="false" length="255" name="COD_DOENCA" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="GRUPO" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="NOME_DOENCA" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="COD_GR_DOENCA" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="NOME_GR_DOENCA" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="COD_ESPEC" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="NOME_ESPEC" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DS_CATEGORIA" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="480" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_fnQkAMGSEe23EdTbuyFC8g-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" value="0" show="false"/>
+    <elementParameter field="TEXT" name="JACCARD" value="0" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="out1">
+      <column comment="" key="false" length="255" name="CD_DOENCA" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DS_GRUPO" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="DS_DOENCA" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="CD_GR_DOENCA" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DS_GR_DOENCA" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="CD_ESPEC" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DS_ESPEC" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DS_CATEGORIA" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DATAHORAPROCESSAMENTO" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DATAHORAINCLUSAO" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="out1">
+        <mapperTableEntries name="CD_DOENCA" expression="row1.COD_DOENCA " type="id_String" nullable="true"/>
+        <mapperTableEntries name="DS_GRUPO" expression="row1.GRUPO " type="id_String" nullable="true"/>
+        <mapperTableEntries name="DS_DOENCA" expression="row1.NOME_DOENCA " type="id_String" nullable="true"/>
+        <mapperTableEntries name="CD_GR_DOENCA" expression="row1.COD_GR_DOENCA " type="id_String" nullable="true"/>
+        <mapperTableEntries name="DS_GR_DOENCA" expression="row1.NOME_GR_DOENCA " type="id_String" nullable="true"/>
+        <mapperTableEntries name="CD_ESPEC" expression="row1.COD_ESPEC " type="id_String" nullable="true"/>
+        <mapperTableEntries name="DS_ESPEC" expression="row1.NOME_ESPEC " type="id_String" nullable="true"/>
+        <mapperTableEntries name="DS_CATEGORIA" expression="row1.DS_CATEGORIA " type="id_String" nullable="true"/>
+        <mapperTableEntries name="DATAHORAPROCESSAMENTO" expression="TypeConvert.String2Date(context.DATAHORAPROCESSAMENTO, &quot;yyyy-MM-dd HH:mm:ss&quot;) " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="DATAHORAINCLUSAO" expression="TalendDate.getCurrentDate() " type="id_Date" nullable="true"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="COD_DOENCA" type="id_String" nullable="true"/>
+        <mapperTableEntries name="GRUPO" type="id_String" nullable="true"/>
+        <mapperTableEntries name="NOME_DOENCA" type="id_String" nullable="true"/>
+        <mapperTableEntries name="COD_GR_DOENCA" type="id_String" nullable="true"/>
+        <mapperTableEntries name="NOME_GR_DOENCA" type="id_String" nullable="true"/>
+        <mapperTableEntries name="COD_ESPEC" type="id_String" nullable="true"/>
+        <mapperTableEntries name="NOME_ESPEC" type="id_String" nullable="true"/>
+        <mapperTableEntries name="DS_CATEGORIA" type="id_String" nullable="true"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tOracleSCD" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="736" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBSCD_1" show="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="oracle_id" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SID" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_18" show="false"/>
+    <elementParameter field="TEXT" name="RAC_URL" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1521&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TYPE" value="IBM DB2" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:id4OzVcJdQk2YnWA1xSOX2d4K6rZWM1vBOVROsjt" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="jobName"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="COLUMN_LIST" name="SURROGATE_KEY" value="SK_DM_GR_CID" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="SK_CREATION" value="TABLE_MAX" show="false"/>
+    <elementParameter field="TEXT" name="SK_DB_SEQUENCE" value="" show="false"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="SK_INPUT_FIELD" value="CD_DOENCA" show="false"/>
+    <elementParameter field="TEXT" name="SK_ROUTINE" value="Numeric.sequence(&quot;seq&quot;, 1, 1)" show="false"/>
+    <elementParameter field="TABLE" name="SOURCE_KEYS" show="false">
+      <elementValue elementRef="NAME" value="CD_DOENCA"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="USE_SAVE_MEM_MODE" value="false"/>
+    <elementParameter field="CHECK" name="SOURCE_KEY_INC_NULL" value="false"/>
+    <elementParameter field="CHECK" name="USE_L0" value="true" show="false"/>
+    <elementParameter field="TABLE" name="L0_FIELDS" show="false">
+      <elementValue elementRef="NAME" value="DATAHORAINCLUSAO"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="USE_L1" value="true" show="false"/>
+    <elementParameter field="TABLE" name="L1_FIELDS" show="false">
+      <elementValue elementRef="NAME" value="DATAHORAPROCESSAMENTO"/>
+      <elementValue elementRef="NAME" value="DS_GRUPO"/>
+      <elementValue elementRef="NAME" value="CD_ESPEC"/>
+      <elementValue elementRef="NAME" value="CD_GR_DOENCA"/>
+      <elementValue elementRef="NAME" value="DS_DOENCA"/>
+      <elementValue elementRef="NAME" value="DS_ESPEC"/>
+      <elementValue elementRef="NAME" value="DS_GR_DOENCA"/>
+      <elementValue elementRef="NAME" value="DS_CATEGORIA"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="ONLY_UPDATE_ACTIVE" value="false" show="false"/>
+    <elementParameter field="CHECK" name="USE_L2" value="false" show="false"/>
+    <elementParameter field="TABLE" name="L2_FIELDS" show="false"/>
+    <elementParameter field="COLUMN_LIST" name="L2_STARTDATE_FIELD" value="scd_start" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="L2_STARTDATE_VALUE" value="JOB_START_TIME" show="false"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="L2_STARTDATE_INPUT_FIELD" value="CD_DOENCA" show="false"/>
+    <elementParameter field="COLUMN_LIST" name="L2_ENDDATE_FIELD" value="scd_end" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="L2_ENDDATE_VALUE" value="NULL_VALUE" show="false"/>
+    <elementParameter field="TEXT" name="L2_ENDDATE_FIXED_VALUE" value="" show="false"/>
+    <elementParameter field="CHECK" name="USE_L2_ACTIVE" value="false" show="false"/>
+    <elementParameter field="COLUMN_LIST" name="L2_ACTIVE_FIELD" value="scd_active" show="false"/>
+    <elementParameter field="CHECK" name="USE_L2_VERSION" value="false" show="false"/>
+    <elementParameter field="COLUMN_LIST" name="L2_VERSION_FIELD" value="scd_version" show="false"/>
+    <elementParameter field="LABEL" name="NOTE" value="(Version must be an Integer)" show="false"/>
+    <elementParameter field="CHECK" name="USE_L3" value="false" show="false"/>
+    <elementParameter field="TABLE" name="L3_FIELDS" show="false">
+      <elementValue elementRef="CURRENT_VALUE" value="DS_GRUPO"/>
+      <elementValue elementRef="PREV_VALUE" value="previous_DS_GRUPO"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;" show="false"/>
+    <elementParameter field="TEXT" name="L2_ENDDATE_TIME_DETAILS" value="&quot;12:00:00&quot;" show="false"/>
+    <elementParameter field="LABEL" name="NOICE" value="(Time pattern: 'HH:mm:ss')" show="false"/>
+    <elementParameter field="CHECK" name="DEBUG" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBSCD_1">
+      <column comment="" key="false" length="255" name="CD_DOENCA" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DS_GRUPO" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="DS_DOENCA" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="CD_GR_DOENCA" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DS_GR_DOENCA" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="CD_ESPEC" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DS_ESPEC" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DS_CATEGORIA" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DATAHORAPROCESSAMENTO" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="DATE" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DATAHORAINCLUSAO" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="DATE" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="Column generated by scd editor." defaultValue="" key="true" length="-1" name="SK_DM_GR_CID" nullable="false" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="255" name="CD_DOENCA" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DS_GRUPO" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="DS_DOENCA" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="CD_GR_DOENCA" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DS_GR_DOENCA" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="CD_ESPEC" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DS_ESPEC" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DS_CATEGORIA" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DATAHORAPROCESSAMENTO" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="DATE" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DATAHORAINCLUSAO" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="DATE" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="Column generated by scd editor." defaultValue="" key="true" length="-1" name="SK_DM_GR_CID" nullable="false" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tJava_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_1" offsetLabelX="0" offsetLabelY="0" source="tPostjob_1" target="tJava_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBConnection_1" offsetLabelX="0" offsetLabelY="0" source="tDBConnection_1" target="tDBInput_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk3" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tMap_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="DS_CATEGORIA"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tDBSCD_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="DS_CATEGORIA"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="out1" show="false"/>
+  </connection>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_2" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBConnection_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+</talendfile:ProcessType>

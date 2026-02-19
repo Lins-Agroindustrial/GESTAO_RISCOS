@@ -1,0 +1,56 @@
+{
+  "itemId" : "_UxxogAkUEe2sDOb-sCL3Xw",
+  "contextList" : [ {
+    "contextName" : "PRODUCAO",
+    "repoId" : "_DsNxgAduEe2mwrIUnyru9w",
+    "parameterList" : [ {
+      "id" : "_DsVGSAduEe2mwrIUnyru9w",
+      "name" : "DW_DBNAME"
+    }, {
+      "id" : "_DsVGRwduEe2mwrIUnyru9w",
+      "name" : "DW_HOST"
+    }, {
+      "id" : "_DsVGSwduEe2mwrIUnyru9w",
+      "name" : "DW_PORT"
+    }, {
+      "id" : "_-l09IweGEe2mwrIUnyru9w",
+      "name" : "DW_PWD"
+    }, {
+      "id" : "_-l09IgeGEe2mwrIUnyru9w",
+      "name" : "DW_USER"
+    } ]
+  }, {
+    "contextName" : "PRODUCAO",
+    "repoId" : "_6iuj4AkiEe2Ax_MwDXx3bg",
+    "parameterList" : [ {
+      "id" : "_dwME4QulEe6SrqimYktwxw",
+      "name" : "PARAMETRODATAINICIO"
+    } ]
+  }, {
+    "contextName" : "HOMOLOGACAO",
+    "repoId" : "_DsNxgAduEe2mwrIUnyru9w",
+    "parameterList" : [ {
+      "id" : "_DsVGQgduEe2mwrIUnyru9w",
+      "name" : "DW_DBNAME"
+    }, {
+      "id" : "_DsVGQQduEe2mwrIUnyru9w",
+      "name" : "DW_HOST"
+    }, {
+      "id" : "_DsVGRQduEe2mwrIUnyru9w",
+      "name" : "DW_PORT"
+    }, {
+      "id" : "_-l09IQeGEe2mwrIUnyru9w",
+      "name" : "DW_PWD"
+    }, {
+      "id" : "_-l09IAeGEe2mwrIUnyru9w",
+      "name" : "DW_USER"
+    } ]
+  }, {
+    "contextName" : "HOMOLOGACAO",
+    "repoId" : "_6iuj4AkiEe2Ax_MwDXx3bg",
+    "parameterList" : [ {
+      "id" : "_dwME4AulEe6SrqimYktwxw",
+      "name" : "PARAMETRODATAINICIO"
+    } ]
+  } ]
+}

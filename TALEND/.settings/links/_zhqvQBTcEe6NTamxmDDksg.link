@@ -1,0 +1,42 @@
+{
+  "itemId" : "_zhqvQBTcEe6NTamxmDDksg",
+  "contextList" : [ {
+    "contextName" : "PRODUCAO",
+    "repoId" : "_BP5WsAeHEe2mwrIUnyru9w",
+    "parameterList" : [ {
+      "id" : "_DsVGSAduEe2mwrIUnyru9w",
+      "name" : "STG_DBNAME"
+    }, {
+      "id" : "_DsVGRwduEe2mwrIUnyru9w",
+      "name" : "STG_HOST"
+    }, {
+      "id" : "_DsVGSwduEe2mwrIUnyru9w",
+      "name" : "STG_PORT"
+    }, {
+      "id" : "_DsVGSgduEe2mwrIUnyru9w",
+      "name" : "STG_PWD"
+    }, {
+      "id" : "_DsVGSQduEe2mwrIUnyru9w",
+      "name" : "STG_USER"
+    } ]
+  }, {
+    "contextName" : "HOMOLOGACAO",
+    "repoId" : "_BP5WsAeHEe2mwrIUnyru9w",
+    "parameterList" : [ {
+      "id" : "_DsVGQgduEe2mwrIUnyru9w",
+      "name" : "STG_DBNAME"
+    }, {
+      "id" : "_DsVGQQduEe2mwrIUnyru9w",
+      "name" : "STG_HOST"
+    }, {
+      "id" : "_DsVGRQduEe2mwrIUnyru9w",
+      "name" : "STG_PORT"
+    }, {
+      "id" : "_DsVGRAduEe2mwrIUnyru9w",
+      "name" : "STG_PWD"
+    }, {
+      "id" : "_DsVGQwduEe2mwrIUnyru9w",
+      "name" : "STG_USER"
+    } ]
+  } ]
+}

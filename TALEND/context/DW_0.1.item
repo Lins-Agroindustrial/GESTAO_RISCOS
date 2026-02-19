@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_DsVGQAduEe2mwrIUnyru9w" confirmationNeeded="false" name="HOMOLOGACAO">
+    <contextParameter xmi:id="_DsVGQQduEe2mwrIUnyru9w" comment="" name="DW_HOST" prompt="DW_HOST?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="bdprod02.work.local"/>
+    <contextParameter xmi:id="_DsVGQgduEe2mwrIUnyru9w" comment="" name="DW_DBNAME" prompt="DW_DBNAME?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="prod02"/>
+    <contextParameter xmi:id="_DsVGRQduEe2mwrIUnyru9w" comment="" name="DW_PORT" prompt="DW_PORT?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="1521"/>
+    <contextParameter xmi:id="_-l09IAeGEe2mwrIUnyru9w" comment="" name="DW_USER" prompt="DW_USER?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="dw"/>
+    <contextParameter xmi:id="_-l09IQeGEe2mwrIUnyru9w" comment="" name="DW_PWD" prompt="DW_PWD?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:pXx5d9EItVOFK+iIq85Qjda8mfskR+70OAlVLl9iGTo8c22X"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_DsVGRgduEe2mwrIUnyru9w" confirmationNeeded="false" name="PRODUCAO">
+    <contextParameter xmi:id="_DsVGRwduEe2mwrIUnyru9w" comment="" name="DW_HOST" prompt="DW_HOST?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="bdprod02.work.local"/>
+    <contextParameter xmi:id="_DsVGSAduEe2mwrIUnyru9w" comment="" name="DW_DBNAME" prompt="DW_DBNAME?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="prod02"/>
+    <contextParameter xmi:id="_DsVGSwduEe2mwrIUnyru9w" comment="" name="DW_PORT" prompt="DW_PORT?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="1521"/>
+    <contextParameter xmi:id="_-l09IgeGEe2mwrIUnyru9w" comment="" name="DW_USER" prompt="DW_USER?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="dw"/>
+    <contextParameter xmi:id="_-l09IweGEe2mwrIUnyru9w" comment="" name="DW_PWD" prompt="DW_PWD?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:TWtDtfR9lSZlCQBQf7Fz05VitLDfI4RwpuhOU5YBWDVGdKiz"/>
+  </talendfile:ContextType>
+</xmi:XMI>

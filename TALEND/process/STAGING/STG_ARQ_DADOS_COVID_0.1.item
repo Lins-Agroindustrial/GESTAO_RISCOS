@@ -1,0 +1,1312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="HOMOLOGACAO" jobType="Standard">
+  <context confirmationNeeded="false" name="PRODUCAO">
+    <contextParameter comment="" name="ANOPLANTIO" prompt="ANOPLANTIO?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_HEnVAO3OEe21GaDCigUP5g"/>
+    <contextParameter comment="" name="CAMINHO_COVID" prompt="CAMINHO_COVID?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="&quot;//work.local/ul/Dados/Ambulatorio/Monitoramento COVID/Dados/&quot;" internalId="_K_tsoPDDEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="DATAHORAPROCESSAMENTO" prompt="DATAHORAPROCESSAMENTO?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_K_tsofDDEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="STG_DBNAME" prompt="STG_DBNAME?" promptNeeded="false" repositoryContextId="_BP5WsAeHEe2mwrIUnyru9w" type="id_String" value="prod02" internalId="_K_tsovDDEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="STG_HOST" prompt="STG_HOST?" promptNeeded="false" repositoryContextId="_BP5WsAeHEe2mwrIUnyru9w" type="id_String" value="bdprod02.work.local" internalId="_K_tso_DDEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="STG_PORT" prompt="STG_PORT?" promptNeeded="false" repositoryContextId="_BP5WsAeHEe2mwrIUnyru9w" type="id_String" value="1521" internalId="_K_tspPDDEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="STG_PWD" prompt="STG_PWD?" promptNeeded="false" repositoryContextId="_BP5WsAeHEe2mwrIUnyru9w" type="id_Password" value="enc:system.encryption.key.v1:b3HgVjkellzqiYbJ6oLuZOEZzkeA2Q0aR35bJ69LGnkCtnG7" internalId="_K_tspfDDEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="STG_USER" prompt="STG_USER?" promptNeeded="false" repositoryContextId="_BP5WsAeHEe2mwrIUnyru9w" type="id_String" value="dw_stage" internalId="_K_tspvDDEe2wq8oM-SeJ3w"/>
+  </context>
+  <context confirmationNeeded="false" name="HOMOLOGACAO">
+    <contextParameter comment="" name="ANOPLANTIO" prompt="ANOPLANTIO?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_HEnVAe3OEe21GaDCigUP5g"/>
+    <contextParameter comment="" name="CAMINHO_COVID" prompt="CAMINHO_COVID?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="&quot;//work.local/ul/Dados/Ambulatorio/Monitoramento COVID/Dados/&quot;" internalId="_K_tsp_DDEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="DATAHORAPROCESSAMENTO" prompt="DATAHORAPROCESSAMENTO?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_K_tsqPDDEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="STG_DBNAME" prompt="STG_DBNAME?" promptNeeded="false" repositoryContextId="_BP5WsAeHEe2mwrIUnyru9w" type="id_String" value="prod02" internalId="_K_tsqfDDEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="STG_HOST" prompt="STG_HOST?" promptNeeded="false" repositoryContextId="_BP5WsAeHEe2mwrIUnyru9w" type="id_String" value="bdprod02.work.local" internalId="_K_tsqvDDEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="STG_PORT" prompt="STG_PORT?" promptNeeded="false" repositoryContextId="_BP5WsAeHEe2mwrIUnyru9w" type="id_String" value="1521" internalId="_K_tsq_DDEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="STG_PWD" prompt="STG_PWD?" promptNeeded="false" repositoryContextId="_BP5WsAeHEe2mwrIUnyru9w" type="id_Password" value="enc:system.encryption.key.v1:4ubpGVoL5XDrDjZPkmXT4IGvnwsysmdALbzEa2WckuXKWV1j" internalId="_K_tsrPDDEe2wq8oM-SeJ3w"/>
+    <contextParameter comment="" name="STG_USER" prompt="STG_USER?" promptNeeded="false" repositoryContextId="_BP5WsAeHEe2mwrIUnyru9w" type="id_String" value="dw_stage" internalId="_K_tsrfDDEe2wq8oM-SeJ3w"/>
+  </context>
+  <parameters>
+    <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" value="" show="false"/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="OVERRIDE_ENCODING_FLAG" value="false" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="OVERRIDE_ENCODING_IN_EXTRA" value="ISO-8859-15" show="false"/>
+    <elementParameter field="TECHNICAL" name="OVERRIDE_ENCODING_IN_EXTRA:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:OLfiiHfUQOHJCsq3xAAHmPqEUbB8/DSmchD7RtMk" show="false"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false" show="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;C:/TALEND/WORKSPACE/.metadata&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="ISO-8859-15" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="false" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" value="tJDBCOutput" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_12" show="false"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:Qiw9igB4LdDFzBS9OiU9s69xw5GzAsKwWrBLRmIS" show="false"/>
+    <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" value="" show="false"/>
+    <routinesParameter id="_cwoqgAdpEe2mwrIUnyru9w" name="DataOperation"/>
+    <routinesParameter id="_cxOgYAdpEe2mwrIUnyru9w" name="Mathematical"/>
+    <routinesParameter id="_cxYRYAdpEe2mwrIUnyru9w" name="Numeric"/>
+    <routinesParameter id="_cxrMUAdpEe2mwrIUnyru9w" name="Relational"/>
+    <routinesParameter id="_cx5OwAdpEe2mwrIUnyru9w" name="StringHandling"/>
+    <routinesParameter id="_cyMJsAdpEe2mwrIUnyru9w" name="TalendDataGenerator"/>
+    <routinesParameter id="_cyV6sAdpEe2mwrIUnyru9w" name="TalendDate"/>
+    <routinesParameter id="_cyo1oAdpEe2mwrIUnyru9w" name="TalendString"/>
+    <routinesParameter id="_cyympgdpEe2mwrIUnyru9w" name="TalendStringUtil"/>
+  </parameters>
+  <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="2" offsetLabelY="9" posX="64" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="224" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="java.io.File folder = new java.io.File(projectName + &quot;_LOGS/&quot;);&#xA;if (!folder.exists()) {&#xA; if (folder.mkdir()) {&#xA; System.out.println(&quot;Logs directory is created!&quot;);&#xA; } else {&#xA; System.out.println(&quot;Failed to create directory!&quot;);&#xA; }&#xA;}&#xA;java.io.File logFile = new java.io.File(projectName + &quot;_LOGS/&quot; + jobName + &quot;.log&quot;);&#xA;java.io.PrintStream ps = new java.io.PrintStream(new java.io.FileOutputStream(logFile));&#xA;System.setOut(ps);&#xA;System.setErr(ps);&#xA;&#xA;System.out.println(jobName + &quot; - v&quot; + jobVersion  + &quot; - BEGIN (&quot; + context.STG_DBNAME + &quot;/&quot; + context.STG_USER + &quot;): &quot; + TalendDate.getDate(&quot;CCYY-MM-DD hh:mm:ss&quot;));&#xA;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_1"/>
+  </node>
+  <node componentName="tPostjob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="224" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_2" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="System.out.println(jobName + &quot; - END: &quot; + TalendDate.getDate(&quot;CCYY-MM-DD hh:mm:ss&quot;));"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_2"/>
+  </node>
+  <node componentName="tOracleRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_1" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SID"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_18"/>
+    <elementParameter field="TEXT" name="RAC_URL" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="context.STG_HOST"/>
+    <elementParameter field="TEXT" name="PORT" value="context.STG_PORT"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.STG_DBNAME"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" value="Oracle" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="context.STG_USER"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:aiBCStrYaH7CTqmBeCC5CJ4M0F02wIMsph2rpYlFVG20BpSrlZw49rjMLg=="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;TRUNCATE TABLE ARQ_SSO_HIST_COVID&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="USE_NB_LINE" value="NONE"/>
+    <elementParameter field="LABEL" name="USE_NB_LINE_NOTE" value="* Only used if the query is an insert, an update or a delete."/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value="" show="false"/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TEXT" name="LABEL" value="TRUNCATE"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBRow_1"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFileInputExcel" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputExcel_1" show="false"/>
+    <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.CAMINHO_COVID + &quot;/COPY_P_TALEND/Dados Monitoramento Covid-19.xlsm&quot;"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:HUb6P5uMbOj5JKqW4stGBTAxRGlYvYFDIb8nAIku"/>
+    <elementParameter field="CHECK" name="ALL_SHEETS" value="false"/>
+    <elementParameter field="TABLE" name="SHEETLIST">
+      <elementValue elementRef="SHEETNAME" value="&quot;DadosHistorico&quot;"/>
+      <elementValue elementRef="USE_REGEX" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="HEADER" value="1"/>
+    <elementParameter field="TEXT" name="FOOTER" value="0" show="false"/>
+    <elementParameter field="TEXT" name="LIMIT" value=""/>
+    <elementParameter field="CHECK" name="AFFECT_EACH_SHEET" value="false" show="false"/>
+    <elementParameter field="TEXT" name="FIRST_COLUMN" value="1"/>
+    <elementParameter field="TEXT" name="LAST_COLUMN" value=""/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="true"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="&quot;.&quot;"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="&quot;,&quot;"/>
+    <elementParameter field="CHECK" name="TRIMALL" value="true"/>
+    <elementParameter field="TABLE" name="TRIMSELECT" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="Indice"/>
+      <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Data"/>
+      <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Observacao"/>
+      <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="StatusOp"/>
+      <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Referencia"/>
+      <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DataCadastro"/>
+      <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Usuario"/>
+      <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DataAtualizacao"/>
+      <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DataAtestado"/>
+      <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DataComunicado"/>
+      <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Matricula"/>
+      <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Turno"/>
+      <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Motivo"/>
+      <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DataContatoSintomas"/>
+      <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ResultadoTeste"/>
+      <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sintomas"/>
+      <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Procedimentos"/>
+      <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DiasAtestado"/>
+      <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CID"/>
+      <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ParecerMedico"/>
+      <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DiagnsticoEnfermagem"/>
+      <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MedicoResponsavel_Old"/>
+      <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TeleMedicina"/>
+      <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DataPrevisao"/>
+      <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Status"/>
+      <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Num_Phone"/>
+      <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CRM"/>
+      <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MedicoResponsavel"/>
+      <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Observacao2"/>
+      <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Observacao3"/>
+      <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Observacao4"/>
+      <elementValue elementRef="TRIM" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MotivoContato"/>
+      <elementValue elementRef="TRIM" value="true"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="CONVERTDATETOSTRING" value="false" show="false"/>
+    <elementParameter field="TABLE" name="DATESELECT" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="Indice"/>
+      <elementValue elementRef="CONVERTDATE" value="true"/>
+      <elementValue elementRef="PATTERN" value="&quot;&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Data"/>
+      <elementValue elementRef="CONVERTDATE" value="true"/>
+      <elementValue elementRef="PATTERN" value="&quot;yyyy-MM-dd&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Observacao"/>
+      <elementValue elementRef="CONVERTDATE" value="true"/>
+      <elementValue elementRef="PATTERN" value="&quot;&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="StatusOp"/>
+      <elementValue elementRef="CONVERTDATE" value="true"/>
+      <elementValue elementRef="PATTERN" value="&quot;&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Referencia"/>
+      <elementValue elementRef="CONVERTDATE" value="true"/>
+      <elementValue elementRef="PATTERN" value="&quot;&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DataCadastro"/>
+      <elementValue elementRef="CONVERTDATE" value="true"/>
+      <elementValue elementRef="PATTERN" value="&quot;yyyy-MM-dd HH:mm:ss&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Usuario"/>
+      <elementValue elementRef="CONVERTDATE" value="true"/>
+      <elementValue elementRef="PATTERN" value="&quot;&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DataAtualizacao"/>
+      <elementValue elementRef="CONVERTDATE" value="true"/>
+      <elementValue elementRef="PATTERN" value="&quot;yyyy-MM-dd HH:mm:ss&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DataAtestado"/>
+      <elementValue elementRef="CONVERTDATE" value="true"/>
+      <elementValue elementRef="PATTERN" value="&quot;yyyy-MM-dd&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DataComunicado"/>
+      <elementValue elementRef="CONVERTDATE" value="true"/>
+      <elementValue elementRef="PATTERN" value="&quot;yyyy-MM-dd&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Matricula"/>
+      <elementValue elementRef="CONVERTDATE" value="true"/>
+      <elementValue elementRef="PATTERN" value="&quot;&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Turno"/>
+      <elementValue elementRef="CONVERTDATE" value="true"/>
+      <elementValue elementRef="PATTERN" value="&quot;&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Motivo"/>
+      <elementValue elementRef="CONVERTDATE" value="true"/>
+      <elementValue elementRef="PATTERN" value="&quot;&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DataContatoSintomas"/>
+      <elementValue elementRef="CONVERTDATE" value="true"/>
+      <elementValue elementRef="PATTERN" value="&quot;yyyy-MM-dd&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ResultadoTeste"/>
+      <elementValue elementRef="CONVERTDATE" value="true"/>
+      <elementValue elementRef="PATTERN" value="&quot;&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sintomas"/>
+      <elementValue elementRef="CONVERTDATE" value="true"/>
+      <elementValue elementRef="PATTERN" value="&quot;&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Procedimentos"/>
+      <elementValue elementRef="CONVERTDATE" value="true"/>
+      <elementValue elementRef="PATTERN" value="&quot;&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DiasAtestado"/>
+      <elementValue elementRef="CONVERTDATE" value="true"/>
+      <elementValue elementRef="PATTERN" value="&quot;&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CID"/>
+      <elementValue elementRef="CONVERTDATE" value="true"/>
+      <elementValue elementRef="PATTERN" value="&quot;&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ParecerMedico"/>
+      <elementValue elementRef="CONVERTDATE" value="true"/>
+      <elementValue elementRef="PATTERN" value="&quot;&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DiagnsticoEnfermagem"/>
+      <elementValue elementRef="CONVERTDATE" value="true"/>
+      <elementValue elementRef="PATTERN" value="&quot;&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MedicoResponsavel_Old"/>
+      <elementValue elementRef="CONVERTDATE" value="true"/>
+      <elementValue elementRef="PATTERN" value="&quot;&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TeleMedicina"/>
+      <elementValue elementRef="CONVERTDATE" value="true"/>
+      <elementValue elementRef="PATTERN" value="&quot;&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DataPrevisao"/>
+      <elementValue elementRef="CONVERTDATE" value="true"/>
+      <elementValue elementRef="PATTERN" value="&quot;&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Status"/>
+      <elementValue elementRef="CONVERTDATE" value="true"/>
+      <elementValue elementRef="PATTERN" value="&quot;&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Num_Phone"/>
+      <elementValue elementRef="CONVERTDATE" value="true"/>
+      <elementValue elementRef="PATTERN" value="&quot;&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CRM"/>
+      <elementValue elementRef="CONVERTDATE" value="true"/>
+      <elementValue elementRef="PATTERN" value="&quot;&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MedicoResponsavel"/>
+      <elementValue elementRef="CONVERTDATE" value="true"/>
+      <elementValue elementRef="PATTERN" value="&quot;&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Observacao2"/>
+      <elementValue elementRef="CONVERTDATE" value="true"/>
+      <elementValue elementRef="PATTERN" value="&quot;&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Observacao3"/>
+      <elementValue elementRef="CONVERTDATE" value="true"/>
+      <elementValue elementRef="PATTERN" value="&quot;&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Observacao4"/>
+      <elementValue elementRef="CONVERTDATE" value="true"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MotivoContato"/>
+      <elementValue elementRef="CONVERTDATE" value="true"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+    </elementParameter>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="READ_REAL_VALUE" value="false" show="false"/>
+    <elementParameter field="CHECK" name="STOPREAD_ON_EMPTYROW" value="false" show="false"/>
+    <elementParameter field="CHECK" name="NOVALIDATE_ON_CELL" value="false" show="false"/>
+    <elementParameter field="CHECK" name="SUPPRESS_WARN" value="false" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="GENERATION_MODE" value="EVENT_MODE"/>
+    <elementParameter field="CHECK" name="INCLUDE_PHONETICRUNS" value="true"/>
+    <elementParameter field="TEXT" name="LABEL" value="DADOS_COVID"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileInputExcel_1">
+      <column comment="" key="false" length="255" name="Indice" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Data" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Observacao" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="StatusOp" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Referencia" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataCadastro" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Usuario" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataAtualizacao" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataAtestado" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataComunicado" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Matricula" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Turno" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Motivo" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataContatoSintomas" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ResultadoTeste" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sintomas" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Procedimentos" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DiasAtestado" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="CID" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ParecerMedico" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DiagnsticoEnfermagem" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="MedicoResponsavel_Old" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="TeleMedicina" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataPrevisao" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Status" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Num_Phone" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="CRM" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="MedicoResponsavel" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Observacao2" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Observacao3" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Observacao4" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="MotivoContato" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="255" name="Indice" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Data" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Observacao" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="StatusOp" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Referencia" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataCadastro" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Usuario" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataAtualizacao" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataAtestado" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataComunicado" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Matricula" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Turno" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Motivo" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataContatoSintomas" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ResultadoTeste" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sintomas" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Procedimentos" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DiasAtestado" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="CID" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ParecerMedico" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DiagnsticoEnfermagem" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="MedicoResponsavel_Old" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="TeleMedicina" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataPrevisao" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Status" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Num_Phone" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="CRM" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="MedicoResponsavel" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Observacao2" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Observacao3" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Observacao4" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="MotivoContato" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="544" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFilterRow_1" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+    <elementParameter field="TABLE" name="CONDITIONS">
+      <elementValue elementRef="INPUT_COLUMN" value="Indice"/>
+      <elementValue elementRef="FUNCTION" value=""/>
+      <elementValue elementRef="OPERATOR" value="!="/>
+      <elementValue elementRef="RVALUE" value="&quot;&quot;"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
+    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="(input_row.ANOPLANTIO.equals(StringHandling.RIGHT(context.ANOPLANTIO,4))&#xA; &amp;&amp; (StringHandling.LEFT(context.ANOPLANTIO, 1).equals(&quot;=&quot;) || StringHandling.LEFT(context.ANOPLANTIO, 2).equals(&quot;>=&quot;)))&#xA;||&#xA;(input_row.ANOPLANTIO.compareTo(StringHandling.RIGHT(context.ANOPLANTIO,4)) > 0 &#xA; &amp;&amp; StringHandling.LEFT(context.ANOPLANTIO, 1).equals(&quot;>&quot;))" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFilterRow_1">
+      <column comment="" key="false" length="255" name="Indice" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Data" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Observacao" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="StatusOp" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Referencia" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataCadastro" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Usuario" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataAtualizacao" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataAtestado" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataComunicado" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Matricula" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Turno" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Motivo" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataContatoSintomas" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ResultadoTeste" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sintomas" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Procedimentos" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DiasAtestado" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="CID" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ParecerMedico" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DiagnsticoEnfermagem" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="MedicoResponsavel_Old" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="TeleMedicina" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataPrevisao" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Status" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Num_Phone" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="CRM" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="MedicoResponsavel" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Observacao2" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Observacao3" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Observacao4" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="MotivoContato" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="FILTER" name="FILTER">
+      <column comment="" key="false" length="255" name="Indice" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Data" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Observacao" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="StatusOp" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Referencia" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataCadastro" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Usuario" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataAtualizacao" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataAtestado" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataComunicado" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Matricula" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Turno" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Motivo" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataContatoSintomas" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ResultadoTeste" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sintomas" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Procedimentos" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DiasAtestado" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="CID" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ParecerMedico" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DiagnsticoEnfermagem" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="MedicoResponsavel_Old" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="TeleMedicina" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataPrevisao" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Status" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Num_Phone" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="CRM" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="MedicoResponsavel" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Observacao2" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Observacao3" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Observacao4" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="MotivoContato" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="255" name="Indice" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Data" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Observacao" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="StatusOp" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Referencia" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataCadastro" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Usuario" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataAtualizacao" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataAtestado" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataComunicado" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Matricula" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Turno" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Motivo" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataContatoSintomas" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ResultadoTeste" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sintomas" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Procedimentos" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DiasAtestado" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="CID" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ParecerMedico" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DiagnsticoEnfermagem" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="MedicoResponsavel_Old" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="TeleMedicina" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataPrevisao" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Status" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Num_Phone" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="CRM" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="MedicoResponsavel" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Observacao2" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Observacao3" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Observacao4" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="MotivoContato" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="704" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_N6IlkAwlEe2A6879-FM6Fw-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" value="0" show="false"/>
+    <elementParameter field="TEXT" name="JACCARD" value="0" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="row3">
+      <column comment="" key="false" length="255" name="Indice" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Data" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Observacao" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="StatusOp" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Referencia" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataCadastro" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Usuario" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataAtualizacao" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataAtestado" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataComunicado" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Matricula" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Turno" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Motivo" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataContatoSintomas" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ResultadoTeste" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sintomas" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Procedimentos" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DiasAtestado" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="CID" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ParecerMedico" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DiagnsticoEnfermagem" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="MedicoResponsavel_Old" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="TeleMedicina" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataPrevisao" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Status" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Num_Phone" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="CRM" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="MedicoResponsavel" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Observacao2" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Observacao3" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Observacao4" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="MotivoContato" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DATAHORAPROCESSAMENTO" nullable="true" pattern="" precision="0" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="row3">
+        <mapperTableEntries name="Indice" expression="row2.Indice " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Data" expression="row2.Data" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Observacao" expression="row2.Observacao " type="id_String" nullable="true"/>
+        <mapperTableEntries name="StatusOp" expression="row2.StatusOp " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Referencia" expression="row2.Referencia " type="id_String" nullable="true"/>
+        <mapperTableEntries name="DataCadastro" expression="row2.DataCadastro" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Usuario" expression="row2.Usuario " type="id_String" nullable="true"/>
+        <mapperTableEntries name="DataAtualizacao" expression="row2.DataAtualizacao " type="id_String" nullable="true"/>
+        <mapperTableEntries name="DataAtestado" expression="row2.DataAtestado" type="id_String" nullable="true"/>
+        <mapperTableEntries name="DataComunicado" expression="row2.DataComunicado " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Matricula" expression="row2.Matricula " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Turno" expression="row2.Turno " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Motivo" expression="row2.Motivo " type="id_String" nullable="true"/>
+        <mapperTableEntries name="DataContatoSintomas" expression="row2.DataContatoSintomas " type="id_String" nullable="true"/>
+        <mapperTableEntries name="ResultadoTeste" expression="row2.ResultadoTeste " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Sintomas" expression="row2.Sintomas " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Procedimentos" expression="row2.Procedimentos " type="id_String" nullable="true"/>
+        <mapperTableEntries name="DiasAtestado" expression="row2.DiasAtestado " type="id_String" nullable="true"/>
+        <mapperTableEntries name="CID" expression="row2.CID " type="id_String" nullable="true"/>
+        <mapperTableEntries name="ParecerMedico" expression="row2.ParecerMedico " type="id_String" nullable="true"/>
+        <mapperTableEntries name="DiagnsticoEnfermagem" expression="row2.DiagnsticoEnfermagem " type="id_String" nullable="true"/>
+        <mapperTableEntries name="MedicoResponsavel_Old" expression="row2.MedicoResponsavel_Old " type="id_String" nullable="true"/>
+        <mapperTableEntries name="TeleMedicina" expression="row2.TeleMedicina " type="id_String" nullable="true"/>
+        <mapperTableEntries name="DataPrevisao" expression="row2.DataPrevisao " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Status" expression="row2.Status " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Num_Phone" expression="row2.Num_Phone " type="id_String" nullable="true"/>
+        <mapperTableEntries name="CRM" expression="row2.CRM " type="id_String" nullable="true"/>
+        <mapperTableEntries name="MedicoResponsavel" expression="row2.MedicoResponsavel " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Observacao2" expression="row2.Observacao2 " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Observacao3" expression="row2.Observacao3 " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Observacao4" expression="row2.Observacao4 " type="id_String" nullable="true"/>
+        <mapperTableEntries name="MotivoContato" expression="row2.MotivoContato " type="id_String" nullable="true"/>
+        <mapperTableEntries name="DATAHORAPROCESSAMENTO" expression="context.DATAHORAPROCESSAMENTO " type="id_String" nullable="true"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="Indice" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Data" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Observacao" type="id_String" nullable="true"/>
+        <mapperTableEntries name="StatusOp" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Referencia" type="id_String" nullable="true"/>
+        <mapperTableEntries name="DataCadastro" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Usuario" type="id_String" nullable="true"/>
+        <mapperTableEntries name="DataAtualizacao" type="id_String" nullable="true"/>
+        <mapperTableEntries name="DataAtestado" type="id_String" nullable="true"/>
+        <mapperTableEntries name="DataComunicado" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Matricula" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Turno" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Motivo" type="id_String" nullable="true"/>
+        <mapperTableEntries name="DataContatoSintomas" type="id_String" nullable="true"/>
+        <mapperTableEntries name="ResultadoTeste" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Sintomas" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Procedimentos" type="id_String" nullable="true"/>
+        <mapperTableEntries name="DiasAtestado" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CID" type="id_String" nullable="true"/>
+        <mapperTableEntries name="ParecerMedico" type="id_String" nullable="true"/>
+        <mapperTableEntries name="DiagnsticoEnfermagem" type="id_String" nullable="true"/>
+        <mapperTableEntries name="MedicoResponsavel_Old" type="id_String" nullable="true"/>
+        <mapperTableEntries name="TeleMedicina" type="id_String" nullable="true"/>
+        <mapperTableEntries name="DataPrevisao" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Status" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Num_Phone" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CRM" type="id_String" nullable="true"/>
+        <mapperTableEntries name="MedicoResponsavel" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Observacao2" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Observacao3" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Observacao4" type="id_String" nullable="true"/>
+        <mapperTableEntries name="MotivoContato" type="id_String" nullable="true"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tOracleOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="864" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBOutput_2" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SID"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_18"/>
+    <elementParameter field="TEXT" name="RAC_URL" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="context.STG_HOST"/>
+    <elementParameter field="TEXT" name="PORT" value="context.STG_PORT"/>
+    <elementParameter field="TEXT" name="TYPE" value="Oracle" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.STG_DBNAME"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TABLESCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="context.STG_USER"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:KRL/Vv74FIBDoXkRGWg0zAShBqsdHhlr7teawuLSogIJQA7IntRc1aNGvA=="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;ARQ_SSO_HIST_COVID&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
+    <elementParameter field="LABEL" name="NOTE" value="Warning : this component configuration will automatically generate a commit before data insert/update/delete" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="oracle_id" show="false"/>
+    <elementParameter field="TEXT" name="JDBC_URL" value="&quot;jdbc:oracle:oci:/@talend&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
+    <elementParameter field="CHECK" name="USE_ALTERNATE_SCHEMA" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ALTERNATE_SCHEMA" value="&quot;&quot;" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TABLE" name="ADD_COLS">
+      <elementValue elementRef="NAME" value="&quot;DATAHORAINCLUSAO&quot;"/>
+      <elementValue elementRef="DATATYPE" value="VARCHAR2(255)"/>
+      <elementValue elementRef="SQL" value="&quot;TO_CHAR(SYSDATE,'YYYY-MM-DD HH24:MI:SS')&quot;"/>
+      <elementValue elementRef="POS" value="AFTER"/>
+      <elementValue elementRef="REFCOL" value="DATAHORAPROCESSAMENTO"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="Indice"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Data"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Observacao"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="StatusOp"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Referencia"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DataCadastro"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Usuario"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DataAtualizacao"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DataAtestado"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DataComunicado"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Matricula"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Turno"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Motivo"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DataContatoSintomas"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ResultadoTeste"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sintomas"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Procedimentos"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DiasAtestado"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CID"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ParecerMedico"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DiagnsticoEnfermagem"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MedicoResponsavel_Old"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TeleMedicina"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DataPrevisao"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Status"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Num_Phone"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CRM"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MedicoResponsavel"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Observacao2"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Observacao3"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Observacao4"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MotivoContato"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DATAHORAPROCESSAMENTO"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="HINT_OPTIONS" show="false"/>
+    <elementParameter field="CHECK" name="CONVERT_COLUMN_TABLE_TO_UPPERCASE" value="false"/>
+    <elementParameter field="CHECK" name="CONTAIN_BLOB_FROM_OTHER_DB" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
+    <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
+    <elementParameter field="CHECK" name="USE_BATCH_AND_USE_CONN" value="false" show="false"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
+    <elementParameter field="CHECK" name="USE_TIMESTAMP_FOR_DATE_TYPE" value="true"/>
+    <elementParameter field="CHECK" name="TRIM_CHAR" value="true"/>
+    <elementParameter field="TEXT" name="LABEL" value="STG"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBOutput_2">
+      <column comment="" key="false" length="255" name="Indice" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Data" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Observacao" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="StatusOp" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Referencia" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataCadastro" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Usuario" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataAtualizacao" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataAtestado" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataComunicado" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Matricula" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Turno" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Motivo" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataContatoSintomas" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ResultadoTeste" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sintomas" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Procedimentos" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DiasAtestado" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="CID" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ParecerMedico" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DiagnsticoEnfermagem" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="MedicoResponsavel_Old" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="TeleMedicina" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataPrevisao" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Status" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Num_Phone" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="CRM" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="MedicoResponsavel" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Observacao2" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Observacao3" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Observacao4" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="MotivoContato" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DATAHORAPROCESSAMENTO" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="255" name="Indice" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Data" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Observacao" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="StatusOp" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Referencia" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataCadastro" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Usuario" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataAtualizacao" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataAtestado" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataComunicado" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Matricula" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Turno" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Motivo" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataContatoSintomas" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ResultadoTeste" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sintomas" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Procedimentos" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DiasAtestado" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="CID" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ParecerMedico" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DiagnsticoEnfermagem" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="MedicoResponsavel_Old" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="TeleMedicina" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DataPrevisao" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Status" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Num_Phone" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="CRM" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="MedicoResponsavel" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Observacao2" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Observacao3" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Observacao4" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="MotivoContato" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="DATAHORAPROCESSAMENTO" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFilterColumns" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="992" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFilterColumns_1" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFilterColumns_1">
+      <column comment="" key="false" length="255" name="ANOPLANTIO" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="TIPOPLANTIO_COD" nullable="true" originalDbColumnName="TIPOPLANTIO" pattern="" precision="-1" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="ANOMES" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="META" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="255" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileCopy_1" show="false"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.CAMINHO_COVID + &quot;Dados Monitoramento Covid-19.xlsm&quot;"/>
+    <elementParameter field="CHECK" name="ENABLE_COPY_DIRECTORY" value="false"/>
+    <elementParameter field="DIRECTORY" name="SOURCE_DERECTORY" value="&quot;C:/TALEND/WORKSPACE&quot;" show="false"/>
+    <elementParameter field="DIRECTORY" name="DESTINATION" value="context.CAMINHO_COVID + &quot;/COPY_P_TALEND&quot;"/>
+    <elementParameter field="CHECK" name="RENAME" value="false"/>
+    <elementParameter field="TEXT" name="DESTINATION_RENAME" value="&quot;NewName.temp&quot;" show="false"/>
+    <elementParameter field="CHECK" name="REMOVE_FILE" value="false"/>
+    <elementParameter field="CHECK" name="REPLACE_FILE" value="true"/>
+    <elementParameter field="CHECK" name="CREATE_DIRECTORY" value="true"/>
+    <elementParameter field="CHECK" name="FAILON" value="false"/>
+    <elementParameter field="CHECK" name="FORCE_COPY_DELETE" value="false" show="false"/>
+    <elementParameter field="CHECK" name="PRESERVE_LAST_MODIFIED_TIME" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileCopy_1"/>
+  </node>
+  <node componentName="tFileDelete" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileDelete_1" show="false"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.CAMINHO_COVID + &quot;/COPY_P_TALEND/Dados Monitoramento Covid-19.xlsm&quot;" show="false"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" value="context.CAMINHO_COVID + &quot;/COPY_P_TALEND/&quot;"/>
+    <elementParameter field="TEXT" name="PATH" value="&quot;C:/TALEND/WORKSPACE/delete_folder or delete_file&quot;" show="false"/>
+    <elementParameter field="CHECK" name="FAILON" value="true"/>
+    <elementParameter field="CHECK" name="FOLDER" value="true"/>
+    <elementParameter field="CHECK" name="FOLDER_FILE" value="false"/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note &quot;CURRENT_STATUS&quot; including:&#xA;&quot;File (or path) deleted.&quot;&#xA;&quot;No file (or path) deleted.&quot;&#xA;&quot;File (or path) does not exist or is invalid.&quot;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileDelete_1"/>
+  </node>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tJava_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_1" offsetLabelX="0" offsetLabelY="0" source="tPostjob_1" target="tJava_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDBRow_1" offsetLabelX="0" offsetLabelY="0" source="tDBRow_1" target="tFileCopy_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk3" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputExcel_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputExcel_1" target="tFilterRow_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="TIPOPLANTIO_DESC"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="EMPRESA_COD"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DataAtualizacao"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Usuario"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ResultadoTeste"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Motivo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DataCadastro"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Num_Phone"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TeleMedicina"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Referencia"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DataContatoSintomas"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DiagnsticoEnfermagem"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DataPrevisao"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Observacao"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Observacao2"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Observacao3"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Observacao4"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="MotivoContato"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="MedicoResponsavel"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Status"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Indice"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DiasAtestado"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Turno"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="StatusOp"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Matricula"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Data"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Procedimentos"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DataAtestado"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="MedicoResponsavel_Old"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Sintomas"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DataComunicado"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ParecerMedico"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CRM"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tFileInputExcel_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputExcel_1" target="tFileDelete_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk5" show="false"/>
+  </connection>
+  <connection connectorName="FILTER" label="row2" lineStyle="0" metaname="FILTER" offsetLabelX="0" offsetLabelY="0" source="tFilterRow_1" target="tMap_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="row3" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tDBOutput_2">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="EMPRESA_COD"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DataAtualizacao"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Usuario"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ResultadoTeste"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Motivo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DataCadastro"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Num_Phone"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TeleMedicina"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Referencia"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DataContatoSintomas"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DiagnsticoEnfermagem"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DataPrevisao"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Observacao"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Observacao2"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Observacao3"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Observacao4"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="MotivoContato"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="MedicoResponsavel"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Status"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Indice"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DiasAtestado"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Turno"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="StatusOp"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Matricula"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Data"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Procedimentos"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DataAtestado"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="MedicoResponsavel_Old"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Sintomas"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DataComunicado"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ParecerMedico"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CRM"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tFileCopy_1" offsetLabelX="-9" offsetLabelY="-6" source="tFileCopy_1" target="tFileInputExcel_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk4" show="false"/>
+  </connection>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_2" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputExcel_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFilterColumns_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileCopy_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileDelete_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+</talendfile:ProcessType>

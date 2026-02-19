@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_DsVGQAduEe2mwrIUnyru9w" confirmationNeeded="false" name="HOMOLOGACAO">
+    <contextParameter xmi:id="_DsVGQQduEe2mwrIUnyru9w" comment="" name="STG_HOST" prompt="STG_HOST?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="bdprod02.work.local"/>
+    <contextParameter xmi:id="_DsVGQgduEe2mwrIUnyru9w" comment="" name="STG_DBNAME" prompt="STG_DBNAME?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="prod02"/>
+    <contextParameter xmi:id="_DsVGQwduEe2mwrIUnyru9w" comment="" name="STG_USER" prompt="STG_USER?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="dw_stage"/>
+    <contextParameter xmi:id="_DsVGRAduEe2mwrIUnyru9w" comment="" name="STG_PWD" prompt="STG_PWD?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:0Rf8l7ZDeTjEvXAbxWYCAZ7CJdZ5HAQjZeiNqJTyWspdW0+T"/>
+    <contextParameter xmi:id="_DsVGRQduEe2mwrIUnyru9w" comment="" name="STG_PORT" prompt="STG_PORT?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="1521"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_DsVGRgduEe2mwrIUnyru9w" confirmationNeeded="false" name="PRODUCAO">
+    <contextParameter xmi:id="_DsVGRwduEe2mwrIUnyru9w" comment="" name="STG_HOST" prompt="STG_HOST?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="bdprod02.work.local"/>
+    <contextParameter xmi:id="_DsVGSAduEe2mwrIUnyru9w" comment="" name="STG_DBNAME" prompt="STG_DBNAME?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="prod02"/>
+    <contextParameter xmi:id="_DsVGSQduEe2mwrIUnyru9w" comment="" name="STG_USER" prompt="STG_USER?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="dw_stage"/>
+    <contextParameter xmi:id="_DsVGSgduEe2mwrIUnyru9w" comment="" name="STG_PWD" prompt="STG_PWD?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:fbe7Cnf600QoyffY/dMizwmGid87syj1som9nOqSlsk/AMh4"/>
+    <contextParameter xmi:id="_DsVGSwduEe2mwrIUnyru9w" comment="" name="STG_PORT" prompt="STG_PORT?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="1521"/>
+  </talendfile:ContextType>
+</xmi:XMI>
