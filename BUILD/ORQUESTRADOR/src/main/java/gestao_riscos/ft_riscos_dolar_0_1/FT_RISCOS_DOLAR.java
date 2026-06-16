@@ -58,7 +58,7 @@ import java.util.Comparator;
 /**
  * Job: FT_RISCOS_DOLAR Purpose: <br>
  * Description:  <br>
- * @author user@talend.com
+ * @author 
  * @version 8.0.1.20211109_1610
  * @status 
  */
@@ -473,7 +473,7 @@ private class TalendException extends Exception {
 					tDBInput_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tUnpivotRow_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tSplitRow_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
 				
@@ -1401,7 +1401,7 @@ public void tDBConnection_1Process(final java.util.Map<String, Object> globalMap
 		globalMap.put("conn_tDBConnection_1", conn_tDBConnection_1);
 	if (null != conn_tDBConnection_1) {
 		
-			conn_tDBConnection_1.setAutoCommit(false);
+			conn_tDBConnection_1.setAutoCommit(true);
 	}
         globalMap.put("host_" + "tDBConnection_1",context.DW_HOST);
         globalMap.put("port_" + "tDBConnection_1",context.DW_PORT);
@@ -3773,33 +3773,33 @@ row3Struct row3_tmp = new row3Struct();
 
 	
 	/**
-	 * [tUnpivotRow_1 begin ] start
+	 * [tSplitRow_1 begin ] start
 	 */
 
 	
 
 	
 		
-		ok_Hash.put("tUnpivotRow_1", false);
-		start_Hash.put("tUnpivotRow_1", System.currentTimeMillis());
+		ok_Hash.put("tSplitRow_1", false);
+		start_Hash.put("tSplitRow_1", System.currentTimeMillis());
 		
 	
-	currentComponent="tUnpivotRow_1";
+	currentComponent="tSplitRow_1";
 
 	
 					if(execStat) {
 						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row2");
 					}
 				
-		int tos_count_tUnpivotRow_1 = 0;
+		int tos_count_tSplitRow_1 = 0;
 		
-
+int nb_line_tSplitRow_1 = 0;
  
 
 
 
 /**
- * [tUnpivotRow_1 begin ] stop
+ * [tSplitRow_1 begin ] stop
  */
 
 
@@ -4070,14 +4070,14 @@ row3Struct row3_tmp = new row3Struct();
 
 	
 	/**
-	 * [tUnpivotRow_1 main ] start
+	 * [tSplitRow_1 main ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tUnpivotRow_1";
+	currentComponent="tSplitRow_1";
 
 	
 					if(execStat){
@@ -4088,44 +4088,52 @@ row3Struct row3_tmp = new row3Struct();
 						);
 					}
 					
-/*
-	&copy; British Telecommunications plc, 2009, All Rights Reserved. Licensed for general use under the terms of GPL v2.
-*/
-	String[] pivotKeysArray = {"PX_BID","PX_ASK","USDBRL_CURNCY"};
+  java.util.List<row4Struct> rows_tSplitRow_1 = new java.util.ArrayList<row4Struct>(3);
+  row4Struct rowTmp_tSplitRow_1 = null;
 
-	for (String field : pivotKeysArray) {
-		row4.DT_REFERENCIA=row2.DT_REFERENCIA;
+  // cache output rows for the loop
+    rowTmp_tSplitRow_1 = new row4Struct();
 
-		row4.pivot_key = field;
-		try {
-			row4.pivot_value = row2.getClass().getDeclaredField(field).get(row2).toString();
-		} catch (Exception e) {
-			row4.pivot_value = null;
-		}
-	
-		if (row4.pivot_value == null || row4.pivot_value.trim().equals("")) {
-			continue;
-		}
-	
+      rowTmp_tSplitRow_1.DT_REFERENCIA = row2.DT_REFERENCIA;
+      rowTmp_tSplitRow_1.pivot_key = "PX_BID";
+      rowTmp_tSplitRow_1.pivot_value = row2.PX_BID;
+    rows_tSplitRow_1.add(rowTmp_tSplitRow_1);
+    nb_line_tSplitRow_1++;
+    rowTmp_tSplitRow_1 = new row4Struct();
 
+      rowTmp_tSplitRow_1.DT_REFERENCIA = row2.DT_REFERENCIA;
+      rowTmp_tSplitRow_1.pivot_key = "PX_ASK";
+      rowTmp_tSplitRow_1.pivot_value = row2.PX_ASK;
+    rows_tSplitRow_1.add(rowTmp_tSplitRow_1);
+    nb_line_tSplitRow_1++;
+    rowTmp_tSplitRow_1 = new row4Struct();
+
+      rowTmp_tSplitRow_1.DT_REFERENCIA = row2.DT_REFERENCIA;
+      rowTmp_tSplitRow_1.pivot_key = "USDBRL_CURNCY";
+      rowTmp_tSplitRow_1.pivot_value = row2.USDBRL_CURNCY;
+    rows_tSplitRow_1.add(rowTmp_tSplitRow_1);
+    nb_line_tSplitRow_1++;
+
+  for (row4Struct row_tSplitRow_1 : rows_tSplitRow_1) {// C_01
+    row4 = row_tSplitRow_1; 
  
 
 
-	tos_count_tUnpivotRow_1++;
+	tos_count_tSplitRow_1++;
 
 /**
- * [tUnpivotRow_1 main ] stop
+ * [tSplitRow_1 main ] stop
  */
 	
 	/**
-	 * [tUnpivotRow_1 process_data_begin ] start
+	 * [tSplitRow_1 process_data_begin ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tUnpivotRow_1";
+	currentComponent="tSplitRow_1";
 
 	
 
@@ -4134,8 +4142,12 @@ row3Struct row3_tmp = new row3Struct();
 
 
 /**
- * [tUnpivotRow_1 process_data_begin ] stop
+ * [tSplitRow_1 process_data_begin ] stop
  */
+// Start of branch "row4"
+if(row4 != null) { 
+
+
 
 	
 	/**
@@ -4266,17 +4278,8 @@ if(row3 != null) {
                            , "VALOR.compareTo(\"#NAME?\") != 0 failed");
             ope_tFilterRow_1.matches((row3.VALOR == null? false : row3.VALOR.compareTo("ERROR:#NAME?") != 0)
                            , "VALOR.compareTo(\"ERROR:#NAME?\") != 0 failed");
-      ope_tFilterRow_1.matches((// code sample : use row3 to define the condition.
-// row3.columnName1.equals("foo") ||!(row3.columnName2.equals("bar"))
-// replace the following expression by your own filter condition 
-//row3.columnName1.equals(row3.columnName2)
-			
-!row3.VALOR.equals("0")  
-&& !row3.VALOR.equals("- 0")  
-&& !row3.VALOR.contains("NAME")  
-&& !row3.VALOR.contains("ERROR")  
-&& !row3.VALOR.contains("N/A")
-			), "advanced condition failed");
+            ope_tFilterRow_1.matches((row3.VALOR == null? false : row3.VALOR.compareTo("") != 0)
+                           , "VALOR.compareTo(\"\") != 0 failed");
     
     if (ope_tFilterRow_1.getMatchFlag()) {
               if(row5 == null){ 
@@ -4604,21 +4607,24 @@ globalMap.put("tDBOutput_2_ERROR_MESSAGE",e_tDBOutput_2.getMessage());
 /**
  * [tMap_1 process_data_end ] stop
  */
-		// end for
-	}
+
+} // End of branch "row4"
 
 
 
 	
+		} // C_01
+	
+	
 	/**
-	 * [tUnpivotRow_1 process_data_end ] start
+	 * [tSplitRow_1 process_data_end ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tUnpivotRow_1";
+	currentComponent="tSplitRow_1";
 
 	
 
@@ -4627,7 +4633,7 @@ globalMap.put("tDBOutput_2_ERROR_MESSAGE",e_tDBOutput_2.getMessage());
 
 
 /**
- * [tUnpivotRow_1 process_data_end ] stop
+ * [tSplitRow_1 process_data_end ] stop
  */
 
 
@@ -4755,31 +4761,31 @@ end_Hash.put("tFilterColumns_1", System.currentTimeMillis());
 
 	
 	/**
-	 * [tUnpivotRow_1 end ] start
+	 * [tSplitRow_1 end ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tUnpivotRow_1";
+	currentComponent="tSplitRow_1";
 
 	
-
+globalMap.put("tSplitRow_1_NB_LINE", nb_line_tSplitRow_1);
 				if(execStat){
 			  		runStat.updateStat(resourceMap,iterateId,2,0,"row2");
 			  	}
 			  	
  
 
-ok_Hash.put("tUnpivotRow_1", true);
-end_Hash.put("tUnpivotRow_1", System.currentTimeMillis());
+ok_Hash.put("tSplitRow_1", true);
+end_Hash.put("tSplitRow_1", System.currentTimeMillis());
 
 
 
 
 /**
- * [tUnpivotRow_1 end ] stop
+ * [tSplitRow_1 end ] stop
  */
 
 	
@@ -5031,14 +5037,14 @@ end_Hash.put("tDBOutput_2", System.currentTimeMillis());
 
 	
 	/**
-	 * [tUnpivotRow_1 finally ] start
+	 * [tSplitRow_1 finally ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tUnpivotRow_1";
+	currentComponent="tSplitRow_1";
 
 	
 
@@ -5047,7 +5053,7 @@ end_Hash.put("tDBOutput_2", System.currentTimeMillis());
 
 
 /**
- * [tUnpivotRow_1 finally ] stop
+ * [tSplitRow_1 finally ] stop
  */
 
 	
@@ -5719,6 +5725,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     129175 characters generated by Talend Open Studio for Data Integration 
- *     on the 10 de dezembro de 2025 08:19:47 BRT
+ *     129553 characters generated by Talend Open Studio for Data Integration 
+ *     on the 16 de junho de 2026 11:14:13 BRT
  ************************************************************************************************/
