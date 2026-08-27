@@ -4,4 +4,7 @@ images/
 poms/
 routes/
 sqlPatterns/
-temp/
+**/*.log
+**/temp/
+**/.Item_*
+**/*.lock
