@@ -1,0 +1,25 @@
+# ===== DBT (todos os projetos dentro de DBT\) =====
+DBT/**/target/
+DBT/**/logs/
+DBT/**/dbt_packages/
+DBT/**/dbt_modules/
+DBT/**/.user.yml
+DBT/**/*.log
+
+# ===== TALEND - desenvolvimento (jobs .item) =====
+TALEND/code/
+TALEND/components/
+TALEND/images/
+TALEND/poms/
+TALEND/routes/
+TALEND/sqlPatterns/
+TALEND/**/*.log
+TALEND/**/temp/
+TALEND/**/.Item_*
+TALEND/**/*.lock
+
+# ===== TALEND - BUILD (jobs compilados/exportados) =====
+BUILD/**/items/
+BUILD/**/src/main/java/
+BUILD/**/*.index
+BUILD/**/*.log
